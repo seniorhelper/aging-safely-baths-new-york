@@ -1,363 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>New York Walk In Tubs | Safe Bathing & Hydrotherapy</title>
-<meta name="description" content="New York walk in tubs and roll in showers with safe entry, hydrotherapy comfort, and professional installation or ship-to-door options.">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <title>New York Walk In Tubs & Roll In Showers | Bath Safety & Hydrotherapy</title>
+  <meta name="description" content="New York walk in tubs and roll in showers with professional installation or ship-to-your-door options. Safer bathing, hydrotherapy comfort, and expert bath safety guidance for New York seniors and caregivers." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<style>
-/* -------------------------------------------------------
-   COLOR SYSTEM + CORE VARIABLES
--------------------------------------------------------- */
-:root {
-  --primary: #0b6fbf;
-  --primary-dark: #084a82;
-  --accent: #0fb5a8;
-  --accent-dark: #0a8178;
-  --bg: #eef4fb;
-  --bg-light: #ffffff;
-  --text: #243447;
-  --muted: #6b7a90;
-  --radius-lg: 22px;
-  --radius-md: 14px;
-  --shadow: 0 8px 20px rgba(10, 40, 80, 0.15);
-  --shadow-soft: 0 4px 12px rgba(10, 40, 80, 0.08);
-  --max-width: 1200px;
-}
+  <style>
+    :root {
+      --bg: #f2f4f8;
+      --bg-alt: #ffffff;
+      --primary: #0b6fbf;
+      --accent: #0fb5a8;
+      --danger: #c9302c;
+      --text: #243447;
+      --muted: #6b7a90;
+      --border: #dde2ec;
+      --radius-pill: 999px;
+      --radius-lg: 18px;
+      --radius-xl: 26px;
+      --shadow-soft: 0 10px 25px rgba(15, 35, 52, 0.12);
+      --max-width: 1120px;
+    }
 
-/* -------------------------------------------------------
-   GLOBAL
--------------------------------------------------------- */
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: radial-gradient(circle at top left, #e3f2ff 0, #f2f4f8 35%, #f8fbff 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-.wrapper {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 20px;
-}
+    .page-shell {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 20px 16px 60px;
+    }
 
-/* -------------------------------------------------------
-   HEADER + BRAND BAR
--------------------------------------------------------- */
-.header-bar {
-  background: linear-gradient(90deg, var(--primary-dark), var(--primary));
-  padding: 14px 0;
-  color: #fff;
-  box-shadow: var(--shadow);
-}
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
 
-.header-inner {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-.header-brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 40%;
+      background: radial-gradient(circle at 30% 20%, #ffffff 0, #7dd3ff 30%, #0b6fbf 75%, #063b63 100%);
+      box-shadow: 0 4px 12px rgba(5, 37, 66, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
 
-.header-brand img {
-  height: 58px;
-  width: auto;
-}
+    .brand-text-main {
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    .brand-text-sub {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
 
-.header-brand-title {
-  font-size: 1.4rem;
-  font-weight: 700;
-}
+    .pill-tag {
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      background: rgba(11, 111, 191, 0.06);
+      color: var(--primary);
+      font-size: 0.8rem;
+    }
 
-.header-sub {
-  font-size: 0.85rem;
-  opacity: 0.9;
-}
+    .call-button {
+      border-radius: var(--radius-pill);
+      background: linear-gradient(135deg, var(--primary), #094d88);
+      color: #fff;
+      padding: 8px 18px;
+      font-size: 0.9rem;
+      border: none;
+      box-shadow: 0 6px 12px rgba(9, 73, 135, 0.35);
+      cursor: pointer;
+    }
 
-.call-now-btn {
-  background: #0fb5a8;
-  padding: 10px 18px;
-  border-radius: 999px;
-  border: none;
-  color: #fff;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-}
-.call-now-btn:hover {
-  background: var(--accent-dark);
-}
+    /* HERO CARD */
+    .hero-card {
+      background: radial-gradient(circle at top right, #e0f4ff 0, #f4f7fd 40%, #ffffff 90%);
+      border-radius: var(--radius-xl);
+      padding: 26px 22px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 24px;
+      margin-bottom: 26px;
+      box-shadow: var(--shadow-soft);
+    }
 
-/* -------------------------------------------------------
-   HERO
--------------------------------------------------------- */
-.hero {
-  background: var(--bg-light);
-  margin-top: 20px;
-  border-radius: var(--radius-lg);
-  padding: 30px;
-  box-shadow: var(--shadow-soft);
-}
+    .hero-title {
+      font-size: 1.9rem;
+      margin-bottom: 10px;
+    }
 
-.hero h1 {
-  margin-top: 0;
-  font-size: 2rem;
-  line-height: 1.2;
-  color: var(--primary-dark);
-}
+    .hero-title .highlight {
+      color: var(--primary);
+    }
 
-.hero-bullets {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
-  gap: 10px 20px;
-  margin-top: 20px;
-}
-.hero-bullets li {
-  list-style: none;
-  padding-left: 0;
-}
+    .hero-lists {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 10px;
+    }
 
-.hero-bullets span {
-  font-weight: bold;
-  color: var(--primary-dark);
-}
+    .hero-lists li {
+      list-style: none;
+      margin-bottom: 6px;
+    }
 
-/* -------------------------------------------------------
-   DARK HYDROTHERAPY PANEL
--------------------------------------------------------- */
-.hydro-panel {
-  margin-top: 20px;
-  background: linear-gradient(135deg, #083a63, #0b6fbf);
-  border-radius: var(--radius-lg);
-  padding: 26px 22px;
-  box-shadow: var(--shadow);
-  color: #ffffff;
-}
+    /* 🔥 FIXED HYDROTHERAPY PANEL */
+    .bubble-panel {
+      background: linear-gradient(135deg, #063b63 0%, #0b6fbf 70%);
+      color: #ffffff;
+      border-radius: 24px;
+      padding: 18px;
+      box-shadow: 0 10px 20px rgba(7, 83, 146, 0.4);
+    }
 
-.hydro-panel h3 {
-  margin-top: 0;
-  font-size: 1.2rem;
-}
+    .bubble-heading {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #fff;
+    }
 
-.hydro-panel p {
-  margin-bottom: 10px;
-  font-size: 0.95rem;
-}
+    .bubble-main {
+      font-size: 0.92rem;
+      margin-bottom: 8px;
+      color: #f0f8ff;
+    }
 
-/* -------------------------------------------------------
-   SECTION CARD
--------------------------------------------------------- */
-.section {
-  background: var(--bg-light);
-  padding: 26px;
-  border-radius: var(--radius-lg);
-  margin: 25px 0;
-  box-shadow: var(--shadow-soft);
-}
+    .bubble-sub {
+      font-size: 0.82rem;
+      color: #e8f4ff;
+    }
 
-.section h2 {
-  margin-top: 0;
-  color: var(--primary-dark);
-}
+    /* MAP */
+    .map-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(150, 176, 204, 0.8);
+      box-shadow: 0 5px 14px rgba(7, 51, 88, 0.3);
+      background: #dbeafe;
+    }
 
-/* -------------------------------------------------------
-   MAP
--------------------------------------------------------- */
-.map-box {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  border: 1px solid #cbd8e6;
-  box-shadow: var(--shadow-soft);
-}
+    /* SECTION CARDS */
+    .section-card {
+      background: var(--bg-alt);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 6px 16px rgba(24, 41, 65, 0.08);
+    }
 
-/* -------------------------------------------------------
-   FAQ
--------------------------------------------------------- */
-details {
-  background: #f9fbff;
-  padding: 12px 14px;
-  border-radius: var(--radius-md);
-  border: 1px solid #d8e2ef;
-  margin: 10px 0;
-  cursor: pointer;
-}
-summary {
-  font-weight: 600;
-  color: var(--primary-dark);
-}
+    /* FAQ */
+    details {
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: #f9fbff;
+      padding: 12px;
+      margin-bottom: 8px;
+    }
 
-/* -------------------------------------------------------
-   FORM
--------------------------------------------------------- */
-form {
-  background: #f8fbff;
-  padding: 20px;
-  border-radius: var(--radius-lg);
-  border: 1px solid #d8e2ef;
-  box-shadow: var(--shadow-soft);
-}
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--primary);
+    }
 
-label {
-  display: block;
-  font-size: 0.85rem;
-  margin-bottom: 4px;
-  color: var(--muted);
-}
+    /* FORM */
+    form {
+      background: #f8fbff;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 16px;
+      box-shadow: 0 4px 10px rgba(12, 35, 63, 0.12);
+    }
 
-input, textarea, select {
-  width: 100%;
-  padding: 10px;
-  border-radius: var(--radius-md);
-  border: 1px solid #c2cede;
-  font-size: 0.9rem;
-  margin-bottom: 14px;
-  outline: none;
-}
+    label {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
 
-textarea {
-  min-height: 100px;
-}
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 9px;
+      border: 1px solid #c4cedf;
+      margin-bottom: 14px;
+    }
 
-.submit-btn {
-  background: var(--accent);
-  color: #fff;
-  padding: 12px 20px;
-  font-size: 1rem;
-  border-radius: 999px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-}
-.submit-btn:hover {
-  background: var(--accent-dark);
-}
+    .submit-btn {
+      background: var(--accent);
+      padding: 10px 20px;
+      border-radius: var(--radius-pill);
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 600;
+    }
 
-/* -------------------------------------------------------
-   FOOTER
--------------------------------------------------------- */
-footer {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-</style>
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+  </style>
 
 </head>
+
 <body>
 
-<!-- =====================================================
-     HEADER BAR
-===================================================== -->
-<div class="header-bar">
-  <div class="header-inner">
-    <div class="header-brand">
-      <img src="asbm-logo.png" alt="Aging Safely Baths & More">
-      <div>
-        <div class="header-brand-title">New York Walk In Tubs</div>
-        <div class="header-sub">By Aging Safely Baths & More</div>
-      </div>
+<div class="page-shell">
+
+<header>
+  <div class="brand-mark">
+    <div class="brand-logo"></div>
+    <div>
+      <div class="brand-text-main">New York Walk In Tubs</div>
+      <div class="brand-text-sub">Bath safety & hydrotherapy comfort across New York State</div>
     </div>
-
-    <a href="tel:1-888-779-2284">
-      <button class="call-now-btn">📞 Call Now: 1-888-779-2284</button>
-    </a>
   </div>
-</div>
 
-<div class="wrapper">
+  <div class="pill-tag">Live help 7 days a week</div>
+  <a href="tel:1-888-779-2284">
+    <button class="call-button">📞 Call now: 1-888-779-2284</button>
+  </a>
+</header>
 
-<!-- =====================================================
-     HERO
-===================================================== -->
-<div class="hero">
-  <h1>Safer New York Walk In Tubs for Confidence, Comfort & Independence</h1>
+<main>
 
-  <ul class="hero-bullets">
-    <li>✔ Low step-in entry & safer seating</li>
-    <li>✔ Hydrotherapy jet massage for sore joints</li>
-    <li>✔ Professional installation or ship-to-door</li>
-    <li>✔ Perfect for seniors, caregivers & mobility needs</li>
-    <li>✔ Statewide service — NYC, Long Island, Upstate</li>
-  </ul>
+<!-- HERO -->
+<section class="hero-card">
+  <div>
+    <h1 class="hero-title">
+      Safer <span class="highlight">New York walk in tubs</span> for confidence & comfort
+    </h1>
 
-  <!-- DARK PANEL -->
-  <div class="hydro-panel">
-    <h3>Hydrotherapy Comfort, Right at Home</h3>
-    <p>Warm water massage can help reduce stiffness, ease joint discomfort, and support circulation — making bathing feel soothing instead of stressful.</p>
-    <p>Many New York customers say they sleep better on soak nights thanks to the warm hydrotherapy and fully supported seating.</p>
+    <ul class="hero-lists">
+      <li>✔ Low step entry & safer footing</li>
+      <li>✔ Built-in seat reduces fall risk</li>
+      <li>✔ Hydrotherapy helps sore joints</li>
+      <li>✔ Statewide NY coverage</li>
+      <li>✔ Install or DIY delivery</li>
+      <li>✔ Friendly guidance, no pressure</li>
+    </ul>
   </div>
-</div>
 
-<!-- =====================================================
-     BENEFITS SECTION
-===================================================== -->
-<div class="section">
-  <h2>Why Walk In Tubs Help New York Families Stay Safer</h2>
-  <p>Walk in tubs lower fall risk, provide dignity and stability, and bring pain-relieving hydrotherapy right into your home. For New York seniors, caregivers and adults with mobility challenges, these systems make bathing safer and more enjoyable.</p>
+  <div class="bubble-panel">
+    <div class="bubble-heading">Hydrotherapy comfort, right at home</div>
+    <div class="bubble-main">Warm water massage can help reduce stiffness and ease joint discomfort so bathing becomes soothing instead of stressful.</div>
+    <div class="bubble-sub">Many New York customers tell us they sleep better on soak nights thanks to warm hydrotherapy and supportive seating.</div>
+  </div>
+</section>
 
-  <div class="map-box" style="margin-top:20px;">
-    <iframe width="100%" height="260" style="border:0;" loading="lazy"
+<!-- BENEFITS -->
+<section class="section-card">
+  <h2>Why walk in tubs are helping New York families stay safer</h2>
+
+  <p>Walk in tubs lower fall risk, improve comfort, and bring warm hydrotherapy directly to your home. Perfect for seniors, caregivers, or adults with mobility challenges.</p>
+
+  <div class="map-wrap" style="margin-top:14px;">
+    <iframe loading="lazy" width="100%" height="250" style="border:0;"
       src="https://www.google.com/maps?q=New+York,+USA&output=embed">
     </iframe>
   </div>
-</div>
+</section>
 
-<!-- =====================================================
-     COUNTIES
-===================================================== -->
-<div class="section">
-  <h2>Service Areas Across New York</h2>
-  <p>We proudly support homeowners across NYC, Long Island, Hudson Valley, Capital Region, Western NY, Upstate, and everywhere in between.</p>
+<!-- COUNTIES -->
+<section class="section-card">
+  <h2>New York service areas</h2>
+  <p>We cover all of New York — NYC, Long Island, Hudson Valley, Capital Region, Finger Lakes, Western NY & Upstate.</p>
 
-  <p style="column-count:2; margin-top:15px;">
-    Albany, Allegany, Bronx, Broome, Cattaraugus, Cayuga, Chautauqua, Chemung, Chenango, Clinton, Columbia, Cortland, Delaware, Dutchess, Erie, Essex, Franklin, Fulton, Genesee, Greene, Hamilton, Herkimer, Jefferson, Kings (Brooklyn), Lewis, Livingston, Madison, Monroe, Montgomery, Nassau, Manhattan, Niagara, Oneida, Onondaga, Ontario, Orange, Orleans, Oswego, Otsego, Putnam, Queens, Rensselaer, Richmond (Staten Island), Rockland, St. Lawrence, Saratoga, Schenectady, Schoharie, Schuyler, Seneca, Steuben, Suffolk, Sullivan, Tioga, Tompkins, Ulster, Warren, Washington, Wayne, Westchester, Wyoming, Yates.
+  <p style="column-count:2; margin-top:12px;">
+    Albany, Allegany, Bronx, Broome, Cattaraugus, Cayuga, Chautauqua, Chemung, Chenango, Clinton, Columbia,
+    Cortland, Delaware, Dutchess, Erie, Essex, Franklin, Fulton, Genesee, Greene, Hamilton, Herkimer, Jefferson,
+    Kings (Brooklyn), Lewis, Livingston, Madison, Monroe, Montgomery, Nassau, Manhattan, Niagara, Oneida, Onondaga,
+    Ontario, Orange, Orleans, Oswego, Otsego, Putnam, Queens, Rensselaer, Richmond (Staten Island), Rockland,
+    St. Lawrence, Saratoga, Schenectady, Schoharie, Schuyler, Seneca, Steuben, Suffolk, Sullivan, Tioga,
+    Tompkins, Ulster, Warren, Washington, Wayne, Westchester, Wyoming, Yates.
   </p>
-</div>
+</section>
 
-<!-- =====================================================
-     FAQ
-===================================================== -->
-<div class="section">
+<!-- FAQ -->
+<section class="section-card">
   <h2>Frequently Asked Questions</h2>
 
   <details>
     <summary>Do you install walk in tubs in New York?</summary>
-    Yes. In many parts of New York, we provide professional installations. Elsewhere, we offer ship-to-door delivery for local installers.
+    <p>Yes. In many areas of NY we can provide installation. In other areas we provide ship-to-door delivery.</p>
   </details>
 
   <details>
-    <summary>Can I keep my warranty if I install it myself or use my own plumber?</summary>
-    Yes — as long as installation follows manufacturer guidelines and local codes.
+    <summary>Can I keep my warranty if I use my own installer?</summary>
+    <p>Yes. Warranty remains valid as long as installation follows manufacturer guidelines.</p>
   </details>
 
   <details>
-    <summary>Can someone come out for measurements?</summary>
-    Yes, when using our installation service. We send a lead installer to confirm access and measurements.
+    <summary>Can someone come measure my bathroom?</summary>
+    <p>Yes, when installation is included. A lead installer verifies sizing and access.</p>
   </details>
 
   <details>
-    <summary>How much do walk in tubs cost in New York?</summary>
-    Pricing varies by size, features, jet systems and install needs. We provide clear written quotes.
+    <summary>How much do walk in tubs cost in NY?</summary>
+    <p>Prices vary by size, jet options, features and installation needs. We provide clear written quotes.</p>
   </details>
-</div>
+</section>
 
-<!-- =====================================================
-     CONTACT FORM (EMAILS TO YOU)
-===================================================== -->
-<div class="section">
-  <h2>Request Info – New York Walk In Tubs</h2>
-  <p>Fill out this quick form and a bath safety specialist will contact you shortly.</p>
+<!-- CONTACT FORM -->
+<section class="section-card">
+  <h2>Request New York walk in tub info</h2>
+  <p>Fill out the form below and a bath safety specialist will contact you shortly.</p>
 
   <form action="mailto:sales@agingsafelybaths.com" method="post" enctype="text/plain">
     <label>Name*</label>
@@ -372,24 +339,25 @@ footer {
     <label>ZIP Code</label>
     <input name="ZIP">
 
-    <label>Product Interest</label>
+    <label>Interest</label>
     <select name="Interest">
       <option>Walk In Tub</option>
       <option>Roll In Shower</option>
       <option>Walk In Tub + Shower Combo</option>
-      <option>Not Sure</option>
+      <option>Not Sure Yet</option>
     </select>
 
-    <label>Tell us about your bathroom / project</label>
+    <label>Tell us about your bathroom</label>
     <textarea name="Details"></textarea>
 
-    <button type="submit" class="submit-btn">Send My Request →</button>
+    <button type="submit" class="submit-btn">Send my request →</button>
   </form>
-</div>
+</section>
+
+</main>
 
 <footer>
-  New York Walk In Tubs – A division of Aging Safely Baths & More<br>
-  <a href="https://www.agingsafelybaths.com" target="_blank">Visit main site</a>
+  New York Walk In Tubs — Safer bathing & hydrotherapy comfort across New York State.
 </footer>
 
 </div>
