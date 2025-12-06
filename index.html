@@ -2,176 +2,485 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>New York Walk In Tubs & Roll In Showers | Bath Safety & Hydrotherapy</title>
-  <meta name="description" content="New York walk in tubs and roll in showers with professional installation or ship-to-your-door options. Safer bathing, hydrotherapy comfort, and expert bath safety guidance for New York seniors and caregivers." />
+  <title>Walk In Tub NY | New York Walk In Tubs & Roll In Showers</title>
+  <meta name="description" content="Walk in tub NY specialists offering New York walk in tubs and roll in showers with professional installation or ship-to-your-door delivery. Safer bathing, hydrotherapy comfort, and licensed New York bath remodel crews." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://walkintubny.com/" />
+  <meta name="keywords" content="walk in tub NY, New York walk in tubs, walk in tubs New York, roll in showers NY, handicap showers New York, senior walk in tub NY, hydrotherapy tubs NY" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Walk In Tub NY | New York Walk In Tubs & Roll In Showers" />
+  <meta property="og:description" content="Safer New York walk in tubs and roll in showers with licensed installation crews across NY or ship-to-door delivery. Call 1-888-779-2284 for friendly bath safety guidance." />
+  <meta property="og:url" content="https://walkintubny.com/" />
+  <meta property="og:type" content="website" />
 
   <style>
     :root {
-      --bg: #f2f4f8;
+      --bg: #f3f5fb;
       --bg-alt: #ffffff;
-      --primary: #0b6fbf;
+      --primary: #0b5ea8;
+      --primary-dark: #073c71;
       --accent: #0fb5a8;
+      --accent-soft: #e0fbf7;
+      --gold: #f5b44b;
       --danger: #c9302c;
-      --text: #243447;
+      --text: #1f2933;
       --muted: #6b7a90;
       --border: #dde2ec;
       --radius-pill: 999px;
       --radius-lg: 18px;
       --radius-xl: 26px;
-      --shadow-soft: 0 10px 25px rgba(15, 35, 52, 0.12);
-      --max-width: 1120px;
+      --shadow-soft: 0 12px 30px rgba(15, 35, 52, 0.12);
+      --max-width: 1160px;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      font-family: system-ui, sans-serif;
-      background: radial-gradient(circle at top left, #e3f2ff 0, #f2f4f8 35%, #f8fbff 100%);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #dbeafe 0, #f3f5fb 32%, #f9fbff 100%);
       color: var(--text);
       line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     .page-shell {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 20px 16px 60px;
+      padding: 20px 16px 70px;
     }
 
+    /* HEADER & NAV */
     header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 18px;
+      gap: 18px;
+      margin-bottom: 14px;
     }
 
     .brand-mark {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
 
     .brand-logo {
-      width: 44px;
-      height: 44px;
-      border-radius: 40%;
-      background: radial-gradient(circle at 30% 20%, #ffffff 0, #7dd3ff 30%, #0b6fbf 75%, #063b63 100%);
-      box-shadow: 0 4px 12px rgba(5, 37, 66, 0.4);
+      width: 48px;
+      height: 48px;
+      border-radius: 20px;
+      background:
+        radial-gradient(circle at 30% 20%, #ffffff 0, #bfe6ff 32%, #0b5ea8 70%, #031933 100%);
+      box-shadow: 0 6px 16px rgba(4, 35, 66, 0.5);
       position: relative;
       overflow: hidden;
     }
 
-    .brand-text-main {
-      font-size: 1.05rem;
-      font-weight: 700;
+    .brand-logo::after {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border-radius: 18px;
+      border: 2px solid rgba(255,255,255,0.6);
     }
+
+    .brand-text-main {
+      font-size: 1.2rem;
+      font-weight: 750;
+      letter-spacing: 0.02em;
+    }
+
     .brand-text-sub {
       font-size: 0.8rem;
       color: var(--muted);
     }
 
-    .pill-tag {
-      padding: 6px 12px;
-      border-radius: var(--radius-pill);
-      background: rgba(11, 111, 191, 0.06);
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.85rem;
+    }
+
+    .nav-link {
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: var(--muted);
+    }
+
+    .nav-link:hover {
+      background: rgba(11, 94, 168, 0.06);
       color: var(--primary);
-      font-size: 0.8rem;
     }
 
-    .call-button {
-      border-radius: var(--radius-pill);
-      background: linear-gradient(135deg, var(--primary), #094d88);
+    .nav-link-cta {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       color: #fff;
-      padding: 8px 18px;
-      font-size: 0.9rem;
-      border: none;
-      box-shadow: 0 6px 12px rgba(9, 73, 135, 0.35);
-      cursor: pointer;
+      padding: 7px 16px;
+      border-radius: var(--radius-pill);
+      font-weight: 600;
+      box-shadow: 0 6px 14px rgba(6, 57, 112, 0.45);
     }
 
-    /* HERO CARD */
+    .nav-link-cta:hover {
+      text-decoration: none;
+      opacity: 0.95;
+    }
+
+    /* BREADCRUMBS */
+    .breadcrumbs {
+      margin: 4px 0 14px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .breadcrumbs a {
+      color: var(--muted);
+    }
+
+    .breadcrumbs span {
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    /* HERO */
     .hero-card {
-      background: radial-gradient(circle at top right, #e0f4ff 0, #f4f7fd 40%, #ffffff 90%);
+      background: radial-gradient(circle at top right, #dbeafe 0, #f4f7fd 40%, #ffffff 100%);
       border-radius: var(--radius-xl);
-      padding: 26px 22px;
+      padding: 26px 24px;
       display: grid;
-      grid-template-columns: 1.4fr 1fr;
-      gap: 24px;
-      margin-bottom: 26px;
+      grid-template-columns: minmax(0, 1.55fr) minmax(0, 1.1fr);
+      gap: 26px;
+      margin-bottom: 24px;
       box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
     }
 
-    .hero-title {
-      font-size: 1.9rem;
+    .hero-pill-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      background: rgba(11, 94, 168, 0.06);
+      color: var(--primary);
       margin-bottom: 10px;
+    }
+
+    .hero-pill-top span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: #e0fbf7;
+      font-size: 0.7rem;
+    }
+
+    h1.hero-title {
+      font-size: 2.02rem;
+      margin: 0 0 8px;
+      letter-spacing: 0.01em;
     }
 
     .hero-title .highlight {
       color: var(--primary);
     }
 
+    .hero-subcopy {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+      max-width: 540px;
+    }
+
+    .hero-subcopy strong {
+      color: var(--primary-dark);
+    }
+
     .hero-lists {
       display: grid;
-      grid-template-columns: repeat(2,1fr);
-      gap: 10px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 20px;
+      margin-bottom: 14px;
+      padding-left: 0;
     }
 
     .hero-lists li {
       list-style: none;
-      margin-bottom: 6px;
+      font-size: 0.9rem;
+      position: relative;
+      padding-left: 22px;
+      color: var(--text);
     }
 
-    /* 🔥 FIXED HYDROTHERAPY PANEL */
+    .hero-lists li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 0.78rem;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-top: 4px;
+    }
+
+    .button-primary {
+      border-radius: var(--radius-pill);
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      padding: 10px 22px;
+      font-size: 0.94rem;
+      font-weight: 600;
+      border: none;
+      box-shadow: 0 8px 18px rgba(7, 60, 118, 0.5);
+      cursor: pointer;
+    }
+
+    .button-primary:hover {
+      opacity: 0.96;
+    }
+
+    .hero-phone {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .hero-phone strong {
+      color: var(--primary-dark);
+    }
+
     .bubble-panel {
-      background: linear-gradient(135deg, #063b63 0%, #0b6fbf 70%);
+      background: linear-gradient(145deg, #031933 0%, #0b5ea8 55%, #0fb5a8 100%);
       color: #ffffff;
       border-radius: 24px;
-      padding: 18px;
-      box-shadow: 0 10px 20px rgba(7, 83, 146, 0.4);
+      padding: 18px 18px 16px;
+      box-shadow: 0 12px 28px rgba(3, 28, 58, 0.6);
+      position: relative;
+      overflow: hidden;
     }
 
     .bubble-heading {
       font-size: 1rem;
       font-weight: 700;
-      margin-bottom: 6px;
-      color: #fff;
+      margin-bottom: 8px;
+      color: #ffffff;
     }
 
     .bubble-main {
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       margin-bottom: 8px;
       color: #f0f8ff;
     }
 
     .bubble-sub {
-      font-size: 0.82rem;
-      color: #e8f4ff;
+      font-size: 0.8rem;
+      color: #dbeafe;
     }
 
-    /* MAP */
-    .map-wrap {
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid rgba(150, 176, 204, 0.8);
-      box-shadow: 0 5px 14px rgba(7, 51, 88, 0.3);
-      background: #dbeafe;
+    .bubble-chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .bubble-chip {
+      font-size: 0.7rem;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.3);
+      backdrop-filter: blur(6px);
+    }
+
+    /* TRUST STRIP */
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .trust-pill {
+      background: #ffffff;
+      border-radius: var(--radius-pill);
+      padding: 8px 14px;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(11, 94, 168, 0.08);
+      box-shadow: 0 4px 10px rgba(15, 35, 52, 0.06);
+    }
+
+    .trust-pill span.icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      background: #e0fbf7;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
     }
 
     /* SECTION CARDS */
     .section-card {
       background: var(--bg-alt);
       border-radius: var(--radius-lg);
-      padding: 20px;
-      margin-bottom: 24px;
-      box-shadow: 0 6px 16px rgba(24, 41, 65, 0.08);
+      padding: 22px 20px;
+      margin-bottom: 22px;
+      box-shadow: 0 8px 20px rgba(24, 41, 65, 0.08);
+    }
+
+    .section-card h2 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+
+    .section-eyebrow {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      gap: 18px;
+    }
+
+    .map-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(150, 176, 204, 0.85);
+      box-shadow: 0 6px 16px rgba(7, 51, 88, 0.25);
+      background: #dbeafe;
+    }
+
+    .bullet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .mini-card {
+      background: #f9fbff;
+      border-radius: 14px;
+      padding: 12px 12px 10px;
+      border: 1px solid rgba(221,226,236,0.9);
+      font-size: 0.88rem;
+    }
+
+    .mini-card h3 {
+      margin: 0 0 6px;
+      font-size: 0.95rem;
+      color: var(--primary-dark);
+    }
+
+    /* PROCESS */
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .process-step {
+      background: #f9fbff;
+      border-radius: 16px;
+      padding: 14px;
+      border: 1px solid var(--border);
+      position: relative;
+      font-size: 0.9rem;
+    }
+
+    .step-number {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--primary);
+      background: #e0ecff;
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+
+    .process-step h3 {
+      margin: 0 0 8px;
+      font-size: 0.98rem;
+      color: var(--primary-dark);
+    }
+
+    /* PRICING */
+    .pricing-highlight {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .pricing-pill {
+      background: #fef6e7;
+      border-radius: 16px;
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      border: 1px solid rgba(245,180,75,0.7);
+      color: #8c5b10;
+    }
+
+    .small-note {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    /* SERVICE AREAS */
+    .service-columns {
+      column-count: 2;
+      column-gap: 20px;
+      font-size: 0.9rem;
     }
 
     /* FAQ */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 18px;
+    }
+
     details {
       border-radius: 12px;
       border: 1px solid var(--border);
       background: #f9fbff;
-      padding: 12px;
+      padding: 11px 12px;
       margin-bottom: 8px;
     }
 
@@ -179,6 +488,32 @@
       cursor: pointer;
       font-weight: 600;
       color: var(--primary);
+      list-style: none;
+      position: relative;
+      padding-right: 20px;
+    }
+
+    summary::marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    details[open] summary::after {
+      content: "–";
+    }
+
+    details p {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: var(--text);
     }
 
     /* FORM */
@@ -186,180 +521,735 @@
       background: #f8fbff;
       border-radius: 16px;
       border: 1px solid var(--border);
-      padding: 16px;
-      box-shadow: 0 4px 10px rgba(12, 35, 63, 0.12);
+      padding: 16px 14px;
+      box-shadow: 0 6px 14px rgba(12, 35, 63, 0.13);
     }
 
     label {
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       color: var(--muted);
+      display: block;
+      margin-bottom: 4px;
     }
 
     input, textarea, select {
       width: 100%;
-      padding: 10px;
+      padding: 9px 10px;
       border-radius: 9px;
       border: 1px solid #c4cedf;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
+      font: inherit;
+    }
+
+    textarea {
+      min-height: 90px;
+      resize: vertical;
     }
 
     .submit-btn {
       background: var(--accent);
-      padding: 10px 20px;
+      padding: 9px 20px;
       border-radius: var(--radius-pill);
       border: none;
       color: #fff;
       cursor: pointer;
       font-weight: 600;
+      font-size: 0.92rem;
+      box-shadow: 0 6px 16px rgba(15, 181, 168, 0.5);
     }
 
+    .submit-btn:hover {
+      opacity: 0.97;
+    }
+
+    .form-note {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    /* CTA STRIP */
+    .cta-strip {
+      margin-top: 4px;
+      padding: 14px 16px;
+      background: linear-gradient(135deg, #031933, #0b5ea8);
+      border-radius: 18px;
+      color: #ffffff;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cta-strip p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .cta-strip strong {
+      color: #fef6e7;
+    }
+
+    .cta-strip a {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    /* FOOTER */
     footer {
-      margin-top: 20px;
+      margin-top: 24px;
       text-align: center;
       font-size: 0.82rem;
       color: var(--muted);
     }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 840px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+
+      .hero-card,
+      .two-col,
+      .faq-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .service-columns {
+        column-count: 1;
+      }
+    }
   </style>
 
+  <!-- SCHEMA MARKUP -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://walkintubny.com/#organization",
+        "name": "Walk In Tub NY",
+        "url": "https://walkintubny.com/",
+        "telephone": "+1-888-779-2284",
+        "logo": "https://walkintubny.com/logo.png",
+        "sameAs": [
+          "https://www.agingsafelybaths.com"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://walkintubny.com/#website",
+        "url": "https://walkintubny.com/",
+        "name": "Walk In Tub NY",
+        "publisher": { "@id": "https://walkintubny.com/#organization" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://walkintubny.com/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://walkintubny.com/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://walkintubny.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you install walk in tubs across New York?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our licensed and insured partners can install walk in tubs in many areas of New York, including New York City, Long Island, Hudson Valley, Capital Region, and Upstate communities. In remote areas we can often provide ship-to-door delivery along with guidance for your local installer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the typical price range for a walk in tub in NY?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most New York homeowners invest somewhere between a basic soaking walk in tub and a fully loaded hydrotherapy system with air and water jets. Your final price depends on tub size, features, electrical and plumbing needs, and how complex it is to get the tub into your home. We provide clear written quotes so you know exactly what to expect before you decide."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I keep my warranty if I use my own installer in New York?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Many customers choose to use their own trusted contractor or plumber. As long as installation follows the manufacturer guidelines, your product warranty remains valid. We can share documentation with your installer so everyone is on the same page."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer roll in showers as well as walk in tubs in New York?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. In addition to walk in tubs, we offer roll in showers and low threshold showers that work well for wheelchair users and people who prefer a shower to a soak. Many New York homeowners choose a barrier free shower for the main bath and a walk in tub for a secondary bath."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I know which walk in tub is right for my New York home?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We start with a quick conversation about your health, home layout, water heater, electrical panel, and goals. From there we narrow it down to a few best fit walk in tubs for your New York bathroom, then provide clear pros, cons, and pricing so you can decide without pressure."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does walk in tub installation usually take in NY?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most standard New York walk in tub projects are completed within one to three days once the tub arrives, depending on plumbing, electrical and any custom tile or surround work. Your specialist will review the timeline before you authorize the project."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you remove my old bathtub during the project?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, your old bathtub or shower is removed as part of a full installation package. We also haul away job-related debris so you are left with a clean, ready-to-use new bathing space."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is a walk in tub a good idea for New York apartments and co-ops?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, many New Yorkers who live in apartments, condos, and co-ops choose compact walk in tubs that fit where a traditional 60 inch tub once sat. We help review access through elevators, stairwells, and hallways and coordinate with management when needed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can walk in tubs help with joint stiffness in cold New York winters?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Warm water, air jets and hydrotherapy jets can help relax tight muscles and ease stiffness after walking on icy sidewalks or dealing with New York winter weather. Many customers say they sleep better on soak nights thanks to the combination of heat, buoyancy and massage."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I get a free New York walk in tub quote?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Call 1-888-779-2284 to speak with a friendly bath safety specialist, or fill out the secure request form on this page. We will walk you through a few questions about your New York home and email or text transparent pricing options so you can review them at your own pace."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
 <div class="page-shell">
 
-<header>
-  <div class="brand-mark">
-    <div class="brand-logo"></div>
-    <div>
-      <div class="brand-text-main">New York Walk In Tubs</div>
-      <div class="brand-text-sub">Bath safety & hydrotherapy comfort across New York State</div>
+  <header>
+    <div class="brand-mark">
+      <div class="brand-logo"></div>
+      <div>
+        <div class="brand-text-main">Walk In Tub NY</div>
+        <div class="brand-text-sub">New York walk in tubs & roll in showers for safer bathing</div>
+      </div>
     </div>
-  </div>
 
-  <div class="pill-tag">Live help 7 days a week</div>
-  <a href="tel:1-888-779-2284">
-    <button class="call-button">📞 Call now: 1-888-779-2284</button>
-  </a>
-</header>
+    <nav aria-label="Primary navigation">
+      <a href="#why-ny" class="nav-link">Why NY walk in tubs</a>
+      <a href="#process" class="nav-link">How it works</a>
+      <a href="#pricing" class="nav-link">Pricing & options</a>
+      <a href="#service-areas" class="nav-link">Service areas</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="#contact" class="nav-link nav-link-cta">Get my free quote</a>
+    </nav>
+  </header>
 
-<main>
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="/">Home</a> › <span>Walk In Tub NY</span>
+  </nav>
 
-<!-- HERO -->
-<section class="hero-card">
-  <div>
-    <h1 class="hero-title">
-      Safer <span class="highlight">New York walk in tubs</span> for confidence & comfort
-    </h1>
+  <main>
 
-    <ul class="hero-lists">
-      <li>✔ Low step entry & safer footing</li>
-      <li>✔ Built-in seat reduces fall risk</li>
-      <li>✔ Hydrotherapy helps sore joints</li>
-      <li>✔ Statewide NY coverage</li>
-      <li>✔ Install or DIY delivery</li>
-      <li>✔ Friendly guidance, no pressure</li>
-    </ul>
-  </div>
+    <!-- HERO -->
+    <section class="hero-card" id="top">
+      <div>
+        <div class="hero-pill-top">
+          <span>NY</span> Safer bathing for New York seniors & caregivers
+        </div>
 
-  <div class="bubble-panel">
-    <div class="bubble-heading">Hydrotherapy comfort, right at home</div>
-    <div class="bubble-main">Warm water massage can help reduce stiffness and ease joint discomfort so bathing becomes soothing instead of stressful.</div>
-    <div class="bubble-sub">Many New York customers tell us they sleep better on soak nights thanks to warm hydrotherapy and supportive seating.</div>
-  </div>
-</section>
+        <h1 class="hero-title">
+          Safer <span class="highlight">walk in tub NY</span> solutions for confidence, comfort & peace of mind
+        </h1>
 
-<!-- BENEFITS -->
-<section class="section-card">
-  <h2>Why walk in tubs are helping New York families stay safer</h2>
+        <p class="hero-subcopy">
+          Every year, thousands of New Yorkers visit the ER after a bathroom fall. A walk in tub or roll in shower
+          turns a stressful, slippery space into a calm, supportive retreat. Our goal is simple:
+          <strong>help you or your loved one stay independent at home as long as possible</strong>.
+        </p>
 
-  <p>Walk in tubs lower fall risk, improve comfort, and bring warm hydrotherapy directly to your home. Perfect for seniors, caregivers, or adults with mobility challenges.</p>
+        <ul class="hero-lists">
+          <li>Low step entry and slip-resistant flooring to reduce fall risk</li>
+          <li>Comfort-height seat so you can bathe without struggling to stand</li>
+          <li>Soothing warm water massage for tired, arthritic joints</li>
+          <li>New York licensed & insured installation crews in many regions</li>
+          <li>Ship-to-your-door options with guidance for your local installer</li>
+          <li>Friendly, no-pressure conversations focused on what is best for your family</li>
+        </ul>
 
-  <div class="map-wrap" style="margin-top:14px;">
-    <iframe loading="lazy" width="100%" height="250" style="border:0;"
-      src="https://www.google.com/maps?q=New+York,+USA&output=embed">
-    </iframe>
-  </div>
-</section>
+        <div class="hero-cta-row">
+          <a href="#contact">
+            <button class="button-primary">Get my free New York walk in tub quote →</button>
+          </a>
+          <div class="hero-phone">
+            Or call <strong><a href="tel:1-888-779-2284">1-888-779-2284</a></strong> for live help 7 days a week.
+          </div>
+        </div>
+      </div>
 
-<!-- COUNTIES -->
-<section class="section-card">
-  <h2>New York service areas</h2>
-  <p>We cover all of New York — NYC, Long Island, Hudson Valley, Capital Region, Finger Lakes, Western NY & Upstate.</p>
+      <aside class="bubble-panel" aria-label="Hydrotherapy benefits">
+        <div class="bubble-heading">Hydrotherapy relief for real New York schedules</div>
+        <div class="bubble-main">
+          Between icy winters, crowded commutes, and busy caregiving responsibilities, your body rarely gets a break.
+          A warm, deep soak in a walk in tub lets your muscles, joints and mind finally exhale — without leaving home.
+        </div>
+        <div class="bubble-sub">
+          Many New York customers tell us they sleep better on “soak nights” and feel more confident moving around
+          the bathroom after they upgrade to a walk in tub or roll in shower.
+        </div>
+        <div class="bubble-chip-row">
+          <div class="bubble-chip">Soothing hydrotherapy jets</div>
+          <div class="bubble-chip">Heated seat & back options</div>
+          <div class="bubble-chip">Easy-reach controls</div>
+          <div class="bubble-chip">Fast-drain technology</div>
+        </div>
+      </aside>
+    </section>
 
-  <p style="column-count:2; margin-top:12px;">
-    Albany, Allegany, Bronx, Broome, Cattaraugus, Cayuga, Chautauqua, Chemung, Chenango, Clinton, Columbia,
-    Cortland, Delaware, Dutchess, Erie, Essex, Franklin, Fulton, Genesee, Greene, Hamilton, Herkimer, Jefferson,
-    Kings (Brooklyn), Lewis, Livingston, Madison, Monroe, Montgomery, Nassau, Manhattan, Niagara, Oneida, Onondaga,
-    Ontario, Orange, Orleans, Oswego, Otsego, Putnam, Queens, Rensselaer, Richmond (Staten Island), Rockland,
-    St. Lawrence, Saratoga, Schenectady, Schoharie, Schuyler, Seneca, Steuben, Suffolk, Sullivan, Tioga,
-    Tompkins, Ulster, Warren, Washington, Wayne, Westchester, Wyoming, Yates.
-  </p>
-</section>
+    <!-- TRUST STRIP -->
+    <section class="trust-strip" aria-label="Trust badges">
+      <div class="trust-pill">
+        <span class="icon">🛠</span>
+        Licensed & insured New York installation crews where available
+      </div>
+      <div class="trust-pill">
+        <span class="icon">🛁</span>
+        Walk in tubs, roll in showers & combo systems
+      </div>
+      <div class="trust-pill">
+        <span class="icon">📋</span>
+        Clear written quotes — no surprise add-ons
+      </div>
+      <div class="trust-pill">
+        <span class="icon">❤️</span>
+        Compassionate guidance for seniors & caregivers
+      </div>
+    </section>
 
-<!-- FAQ -->
-<section class="section-card">
-  <h2>Frequently Asked Questions</h2>
+    <!-- WHY NY WALK IN TUBS -->
+    <section class="section-card" id="why-ny">
+      <div class="section-eyebrow">Why walk in tubs in New York</div>
+      <h2>Why New York homeowners are upgrading to walk in tubs & roll in showers</h2>
 
-  <details>
-    <summary>Do you install walk in tubs in New York?</summary>
-    <p>Yes. In many areas of NY we can provide installation. In other areas we provide ship-to-door delivery.</p>
-  </details>
+      <div class="two-col">
+        <div>
+          <p>
+            New York homes come in every shape and size — from compact Manhattan apartments to historic brownstones,
+            Hudson Valley farmhouses and suburban family homes on Long Island. The one thing they all share is a
+            bathroom that was never designed with aging bodies and mobility challenges in mind.
+          </p>
 
-  <details>
-    <summary>Can I keep my warranty if I use my own installer?</summary>
-    <p>Yes. Warranty remains valid as long as installation follows manufacturer guidelines.</p>
-  </details>
+          <p>
+            Traditional bathtubs require a high step over a slippery edge, twisting and reaching for grab bars, and
+            lowering your body all the way to the floor. For a senior with arthritis, balance issues, Parkinson’s or
+            simply “slower feet” after years of hard work, that can feel like a daily obstacle course.
+          </p>
 
-  <details>
-    <summary>Can someone come measure my bathroom?</summary>
-    <p>Yes, when installation is included. A lead installer verifies sizing and access.</p>
-  </details>
+          <p>
+            A modern walk in tub or roll in shower changes the story. Instead of bracing for a risky transfer, you
+            open an easy-swing door, sit on a secure, chair-height seat, and let warm water do the work. You stay
+            supported, stable and covered — with the door locked, seals engaged and grab bars right where you expect
+            them.
+          </p>
 
-  <details>
-    <summary>How much do walk in tubs cost in NY?</summary>
-    <p>Prices vary by size, jet options, features and installation needs. We provide clear written quotes.</p>
-  </details>
-</section>
+          <p>
+            For many New York families, the real benefit is peace of mind. Adult children can worry less when a parent
+            lives alone upstate. Spouses can step back from hands-on lifting and guarding and step into more of a
+            supportive coaching role. And seniors who once avoided bathing out of fear can enjoy a relaxing evening
+            soak again.
+          </p>
 
-<!-- CONTACT FORM -->
-<section class="section-card">
-  <h2>Request New York walk in tub info</h2>
-  <p>Fill out the form below and a bath safety specialist will contact you shortly.</p>
+          <div class="bullet-grid">
+            <div class="mini-card">
+              <h3>Reduce bathroom fall risk</h3>
+              <p>
+                Low step entry, textured floor surfaces, and integrated grab bars dramatically reduce the most common
+                causes of bathroom falls — especially in tight New York bathrooms where every inch matters.
+              </p>
+            </div>
+            <div class="mini-card">
+              <h3>Support sore joints & circulation</h3>
+              <p>
+                Hydrotherapy jets and warm, deep water help ease stiffness after walking city blocks, climbing subway
+                stairs or shoveling snow. Many customers report less pain and better sleep on nights they soak.
+              </p>
+            </div>
+            <div class="mini-card">
+              <h3>Stay in your NY home longer</h3>
+              <p>
+                A safer bathroom can delay or prevent a move to assisted living. That means more years in the home,
+                neighborhood and routines you love — whether you are in Brooklyn, Buffalo or Binghamton.
+              </p>
+            </div>
+            <div class="mini-card">
+              <h3>Flexible solutions for any bathroom</h3>
+              <p>
+                From compact 48–52 inch models for apartments to larger bariatric walk in tubs and roll in showers, we
+                help match the right system to your exact New York bathroom footprint.
+              </p>
+            </div>
+          </div>
+        </div>
 
-  <form action="mailto:sales@agingsafelybaths.com" method="post" enctype="text/plain">
-    <label>Name*</label>
-    <input name="Name" required>
+        <aside class="map-wrap" aria-label="New York coverage map">
+          <iframe loading="lazy" width="100%" height="320" style="border:0;"
+            src="https://www.google.com/maps?q=New+York,+USA&output=embed"
+            title="Service area map for Walk In Tub NY">
+          </iframe>
+        </aside>
+      </div>
+    </section>
 
-    <label>Phone*</label>
-    <input name="Phone" required>
+    <!-- PROCESS -->
+    <section class="section-card" id="process">
+      <div class="section-eyebrow">How it works</div>
+      <h2>Our simple 3-step New York walk in tub process</h2>
 
-    <label>Email*</label>
-    <input type="email" name="Email" required>
+      <p>
+        You don’t have to know which brand, size or jet package you want. That is our job. We walk you through a
+        simple, respectful process so you can make a clear decision without high-pressure sales tactics.
+      </p>
 
-    <label>ZIP Code</label>
-    <input name="ZIP">
+      <div class="process-steps">
+        <div class="process-step">
+          <span class="step-number">Step 1</span>
+          <h3>15–20 minute New York bath safety consultation</h3>
+          <p>
+            We start by learning about you or your loved one — mobility, balance, medical conditions, and what feels
+            hardest about bathing today. We also ask about your New York home, from apartment access and co-op rules
+            to basement stairs and narrow hallways in older houses.
+          </p>
+          <p>
+            From there, we narrow the choices down to a handful of walk in tub or roll in shower options that will
+            physically fit and truly help. No endless catalogs, no confusing jargon — just practical solutions.
+          </p>
+        </div>
 
-    <label>Interest</label>
-    <select name="Interest">
-      <option>Walk In Tub</option>
-      <option>Roll In Shower</option>
-      <option>Walk In Tub + Shower Combo</option>
-      <option>Not Sure Yet</option>
-    </select>
+        <div class="process-step">
+          <span class="step-number">Step 2</span>
+          <h3>Custom options, visuals & transparent pricing</h3>
+          <p>
+            Next, we email or text you clear information outlining each recommended option. This includes features
+            like hydrotherapy jets, heated seats, fast-drain systems and grab bar layouts, along with expected time
+            frames and price ranges.
+          </p>
+          <p>
+            You can share this information with family members, doctors or trusted advisors. We are happy to answer
+            follow-up questions and revise options until you feel confident.
+          </p>
+        </div>
 
-    <label>Tell us about your bathroom</label>
-    <textarea name="Details"></textarea>
+        <div class="process-step">
+          <span class="step-number">Step 3</span>
+          <h3>Licensed installation or ship-to-your-door delivery</h3>
+          <p>
+            Once you choose your preferred solution, we coordinate delivery and installation. In many parts of New
+            York we can provide a licensed and insured crew that handles everything from removing your old tub to
+            final clean-up.
+          </p>
+          <p>
+            In areas where installation is not available, we ship the walk in tub directly to your home and work with
+            your chosen contractor or plumber to make sure they have the right documentation for a clean, warranty-safe
+            install.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <button type="submit" class="submit-btn">Send my request →</button>
-  </form>
-</section>
+    <!-- PRICING & OPTIONS -->
+    <section class="section-card" id="pricing">
+      <div class="section-eyebrow">Pricing & options</div>
+      <h2>Walk in tub NY pricing, expectations & popular options</h2>
 
-</main>
+      <p>
+        One of the first questions New York homeowners ask us is, “How much does a walk in tub cost?” The honest answer:
+        pricing depends on the size of your bathroom, the model you choose, and whether your project requires electrical
+        or plumbing upgrades. Our promise is to tell you the truth about price ranges so you can budget realistically.
+      </p>
 
-<footer>
-  New York Walk In Tubs — Safer bathing & hydrotherapy comfort across New York State.
-</footer>
+      <p>
+        Basic soaker walk in tubs with limited extras can be significantly more affordable than deep, fully loaded
+        hydrotherapy systems with air and water jets, chromotherapy lighting and heated surfaces. Apartment and co-op
+        projects may also involve extra planning with building management, which we help you navigate.
+      </p>
+
+      <div class="pricing-highlight">
+        <div class="pricing-pill">
+          No high-pressure sales visits — most New York quotes are prepared by phone and email.
+        </div>
+        <div class="pricing-pill">
+          We explain where you can save and where it is worth investing a little more for long-term safety.
+        </div>
+      </div>
+
+      <p class="small-note">
+        We can also discuss ways to spread out payments and how some customers in New York mix personal savings,
+        family support and potential home improvement financing to make the project more comfortable.
+      </p>
+
+      <div class="bullet-grid" style="margin-top:16px;">
+        <div class="mini-card">
+          <h3>Soaker walk in tubs</h3>
+          <p>
+            Deep, comfortable soaking tubs with a secure door, built-in seat and grab bars. Ideal for New Yorkers who
+            want safer entry and exit but do not necessarily need jets.
+          </p>
+        </div>
+        <div class="mini-card">
+          <h3>Hydrotherapy & air jet tubs</h3>
+          <p>
+            Combine heat, buoyancy and targeted jets to help ease joint and muscle discomfort — especially welcome
+            after cold winter days or long commutes.
+          </p>
+        </div>
+        <div class="mini-card">
+          <h3>Roll in & low threshold showers</h3>
+          <p>
+            Barrier free or low-step showers for wheelchair users and people who find stepping into any tub painful.
+            Available with seated and standing layouts.
+          </p>
+        </div>
+        <div class="mini-card">
+          <h3>Compact & bariatric options</h3>
+          <p>
+            Space-saving footprints for apartments and wider, reinforced models designed to support larger body types.
+            We take real-world measurements so you know what fits.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE AREAS -->
+    <section class="section-card" id="service-areas">
+      <div class="section-eyebrow">Service areas</div>
+      <h2>Walk in tub NY service areas — we cover the entire state</h2>
+
+      <p>
+        Whether you live in the heart of New York City, along the shores of Lake Erie, in the Finger Lakes, or in a
+        quiet Hudson Valley town, we are here to help. Our network allows us to serve most of New York with either
+        full-service installation or ship-to-your-door delivery paired with local installer support.
+      </p>
+
+      <p class="small-note">
+        You can also explore our Aging Safely Baths New York locations page for even more details:
+        <a href="https://www.agingsafelybaths.com/about/locations/new-york/" target="_blank" rel="noopener">
+          New York walk in tubs & roll in showers
+        </a>.
+      </p>
+
+      <h3 style="margin-top:16px; font-size:1rem;">New York counties we serve</h3>
+      <p class="service-columns">
+        Albany, Allegany, Bronx, Broome, Cattaraugus, Cayuga, Chautauqua, Chemung, Chenango, Clinton, Columbia,
+        Cortland, Delaware, Dutchess, Erie, Essex, Franklin, Fulton, Genesee, Greene, Hamilton, Herkimer, Jefferson,
+        Kings (Brooklyn), Lewis, Livingston, Madison, Monroe, Montgomery, Nassau, New York (Manhattan), Niagara,
+        Oneida, Onondaga, Ontario, Orange, Orleans, Oswego, Otsego, Putnam, Queens, Rensselaer, Richmond
+        (Staten Island), Rockland, St. Lawrence, Saratoga, Schenectady, Schoharie, Schuyler, Seneca, Steuben,
+        Suffolk, Sullivan, Tioga, Tompkins, Ulster, Warren, Washington, Wayne, Westchester, Wyoming, Yates.
+      </p>
+
+      <div class="cta-strip">
+        <p>
+          Ready to explore a safer bath for your New York home?
+          <strong>Call <a href="tel:1-888-779-2284">1-888-779-2284</a></strong> or request a free quote below.
+        </p>
+        <a href="#contact" class="button-primary" style="text-decoration:none; box-shadow:none;">
+          Start my NY walk in tub quote →
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ + CONTACT -->
+    <section class="section-card" id="faq">
+      <div class="section-eyebrow">Questions & answers</div>
+      <h2>New York walk in tub FAQ</h2>
+
+      <div class="faq-grid">
+        <div>
+          <details>
+            <summary>Do you install walk in tubs across New York?</summary>
+            <p>
+              Yes. In many areas of New York we can provide licensed and insured installation crews that handle
+              removal of your old tub or shower, installation of your new walk in tub, and final clean-up. In more
+              remote areas, we offer ship-to-door delivery and provide documentation and guidance for your local
+              installer or contractor.
+            </p>
+          </details>
+
+          <details>
+            <summary>What is the typical price range for a walk in tub in NY?</summary>
+            <p>
+              Pricing depends on the size of the unit, the features you choose, and how complex your bathroom is.
+              A basic soaker walk in tub with minimal electrical work will cost less than a large hydrotherapy model
+              with extensive tile and plumbing changes. During your quote, we outline a realistic price range and
+              help you compare options side by side so you can invest wisely.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I keep my warranty if I use my own installer?</summary>
+            <p>
+              Yes. Many New York customers work with a plumber or remodeling contractor they already trust. As long as
+              your installer follows the manufacturer’s written instructions, your warranty remains intact. We can share
+              those documents and answer questions before work begins.
+            </p>
+          </details>
+
+          <details>
+            <summary>Do you offer roll in showers as well as walk in tubs?</summary>
+            <p>
+              Absolutely. Some New Yorkers prefer a roll in or low threshold shower instead of a deep soaker, especially
+              if they use a wheelchair, walker or shower chair. We can show you both walk in tub and roll in shower
+              designs so you can choose what fits your routines and bathroom best.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can walk in tubs really help with pain and stiffness?</summary>
+            <p>
+              While everyone’s body is different, many customers report that warm water, buoyancy and gentle jets make
+              evenings more comfortable, especially after cold commutes, standing jobs or long days caring for others.
+              Walk in tubs are not a medical treatment, but they can complement the self-care plan you create with your
+              doctors and therapists.
+            </p>
+          </details>
+
+          <details>
+            <summary>Is a walk in tub a good option for New York apartments and co-ops?</summary>
+            <p>
+              Yes, as long as we can safely deliver the unit through elevators, stairwells and hallways, and your
+              building approves the project. We help you choose compact models that fit in tight bathrooms and provide
+              documentation for co-op boards or management companies when needed.
+            </p>
+          </details>
+
+          <details>
+            <summary>How long does walk in tub installation usually take?</summary>
+            <p>
+              Most standard projects in New York take one to three days once the materials are on site. Larger, more
+              custom projects — such as those involving new tile, flooring or plumbing reroutes — can take a bit
+              longer. Your bath specialist will provide a realistic time frame before you commit.
+            </p>
+          </details>
+
+          <details>
+            <summary>Do you remove my old bath and handle disposal?</summary>
+            <p>
+              Yes. Full installation packages include removal and disposal of your old tub or shower and job-related
+              debris. Our goal is for you to walk into a clean, finished space and enjoy your new walk in tub or roll
+              in shower right away.
+            </p>
+          </details>
+
+          <details>
+            <summary>What if I am just starting to explore walk in tubs?</summary>
+            <p>
+              That is perfectly okay. Many New York families contact us months before they are ready to move forward.
+              You can use your quote as a planning tool, compare options, and talk things over with relatives or
+              caregivers. We are here to help, not to rush your decision.
+            </p>
+          </details>
+
+          <details>
+            <summary>How do I get a free New York walk in tub quote?</summary>
+            <p>
+              Call <strong>1-888-779-2284</strong> to speak with a friendly New York bath safety specialist, or fill out
+              the short form on this page. We will collect a few details about your bathroom and your goals and then
+              prepare clear options you can review from home.
+            </p>
+          </details>
+        </div>
+
+        <!-- CONTACT FORM -->
+        <aside id="contact" aria-label="Request information form">
+          <h3 style="margin-top:0; font-size:1rem;">Request your New York walk in tub or shower info</h3>
+          <p style="font-size:0.9rem;">
+            Share a few details and a bath safety specialist will follow up with tailored options for your New York
+            home. No pushy sales visits — just honest, helpful guidance.
+          </p>
+
+          <form action="mailto:sales@agingsafelybaths.com" method="post" enctype="text/plain">
+            <input type="hidden" name="Subject" value="WalkInTubNY.com lead" />
+
+            <label for="name">Name*</label>
+            <input id="name" name="Name" required />
+
+            <label for="phone">Phone*</label>
+            <input id="phone" name="Phone" required />
+
+            <label for="email">Email*</label>
+            <input id="email" type="email" name="Email" required />
+
+            <label for="zip">ZIP Code</label>
+            <input id="zip" name="ZIP" />
+
+            <label for="interest">Primary interest</label>
+            <select id="interest" name="Interest">
+              <option>Walk in tub</option>
+              <option>Roll in shower</option>
+              <option>Walk in tub + shower combo</option>
+              <option>Not sure yet</option>
+            </select>
+
+            <label for="details">Tell us about your bathroom & goals</label>
+            <textarea id="details" name="Details" placeholder="Example: 60 inch tub in small NYC bathroom, want safer entry for my mom with arthritis."></textarea>
+
+            <button type="submit" class="submit-btn">Send my New York bath safety request →</button>
+
+            <div class="form-note">
+              Prefer to talk? Call <strong><a href="tel:1-888-779-2284">1-888-779-2284</a></strong> and mention
+              WalkInTubNY.com so we can quickly pull up this information.
+            </div>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Walk In Tub NY — New York walk in tubs & roll in showers for safer bathing and hydrotherapy comfort.
+    <br />
+    An affiliate of <a href="https://www.agingsafelybaths.com" target="_blank" rel="noopener">Aging Safely Baths</a>.
+  </footer>
 
 </div>
+
 </body>
 </html>
