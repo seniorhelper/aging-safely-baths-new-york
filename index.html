@@ -16,21 +16,20 @@
 
   <style>
     :root {
-      --bg: #f4f8ff;
+      --bg: #f7fbff;
       --bg-alt: #ffffff;
-      --primary: #0b5ea8;
-      --primary-dark: #073c71;
-      --accent: #0fb5a8;
-      --accent-soft: #e0fbf7;
+      --primary: #0b6fb8;
+      --primary-dark: #074678;
+      --accent: #10b3a1;
+      --accent-soft: #e3faf6;
       --gold: #f5b44b;
-      --danger: #c9302c;
       --text: #1f2933;
       --muted: #6b7a90;
       --border: #dde2ec;
       --radius-pill: 999px;
       --radius-lg: 18px;
       --radius-xl: 26px;
-      --shadow-soft: 0 12px 30px rgba(15, 35, 52, 0.12);
+      --shadow-soft: 0 14px 36px rgba(15, 35, 52, 0.12);
       --max-width: 1160px;
     }
 
@@ -42,7 +41,7 @@
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at 5% 0, #e3f2ff 0, #f6f9ff 34%, #ffffff 100%);
+        radial-gradient(circle at 0 0, #e3f2ff 0, #f7fbff 38%, #ffffff 100%);
       color: var(--text);
       line-height: 1.6;
     }
@@ -51,7 +50,6 @@
       color: var(--primary);
       text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
     }
@@ -62,75 +60,52 @@
       padding: 20px 16px 70px;
     }
 
-    /* HEADER & NAV */
+    /* HEADER */
     header {
+      margin-bottom: 10px;
+    }
+
+    .header-row {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       gap: 18px;
-      margin-bottom: 14px;
+    }
+
+    .brand-block {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
     .brand-mark {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    /* Removed dark ball, replaced with simple bubble band */
-    .brand-badge {
-      padding: 10px 14px;
-      border-radius: 999px;
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
       background:
-        radial-gradient(circle at 0 0, #ffffff 0, #cfe9ff 40%, #9fdaf6 80%);
-      box-shadow: 0 6px 16px rgba(4, 35, 66, 0.25);
-      display: flex;
-      align-items: center;
-      gap: 8px;
+        radial-gradient(circle at 30% 15%, #ffffff 0, #cfe7ff 40%, #0b6fb8 90%);
+      box-shadow: 0 8px 22px rgba(8, 54, 97, 0.5);
       position: relative;
       overflow: hidden;
     }
 
-    .brand-badge::after {
+    .brand-mark::after {
       content: "";
       position: absolute;
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,255,255,0.7) 0, rgba(255,255,255,0) 60%);
-      top: -40px;
-      right: -24px;
-      opacity: 0.9;
+      inset: 10px;
+      border-radius: 16px;
+      border: 2px solid rgba(255,255,255,0.7);
     }
 
-    .brand-badge-icon {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 20%, #ffffff 0, #9fdaf6 55%, #0b5ea8 100%);
+    .brand-mark-icon {
+      position: absolute;
+      inset: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 16px;
+      font-size: 22px;
       color: #ffffff;
-      z-index: 1;
-    }
-
-    .brand-badge-text {
-      z-index: 1;
-    }
-
-    .brand-badge-text-main {
-      font-size: 0.9rem;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      color: var(--primary-dark);
-    }
-
-    .brand-badge-text-sub {
-      font-size: 0.7rem;
-      color: var(--muted);
     }
 
     .brand-text-main {
@@ -142,13 +117,15 @@
     .brand-text-sub {
       font-size: 0.82rem;
       color: var(--muted);
+      max-width: 260px;
     }
 
     nav {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      gap: 14px;
-      font-size: 0.85rem;
+      gap: 12px;
+      font-size: 0.86rem;
     }
 
     .nav-link {
@@ -158,51 +135,73 @@
     }
 
     .nav-link:hover {
-      background: rgba(11, 94, 168, 0.06);
+      background: rgba(11, 111, 184, 0.08);
       color: var(--primary);
     }
 
     .nav-link-cta {
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color: #fff;
-      padding: 7px 16px;
-      border-radius: var(--radius-pill);
+      background: #ffffff;
+      border-radius: 999px;
+      padding: 7px 14px;
+      border: 1px solid rgba(11,111,184,0.22);
       font-weight: 600;
-      box-shadow: 0 6px 14px rgba(6, 57, 112, 0.45);
+      color: var(--primary-dark);
+      box-shadow: 0 4px 10px rgba(15,35,52,0.08);
     }
 
     .nav-link-cta:hover {
       text-decoration: none;
-      opacity: 0.95;
+      background: #f0f7ff;
     }
 
-    /* Header phone callout */
-    .header-phone-cta {
-      margin-left: 8px;
-      padding: 6px 16px;
-      border-radius: 999px;
-      background: #ffffff;
-      border: 1px solid rgba(11, 94, 168, 0.16);
-      box-shadow: 0 4px 10px rgba(7, 60, 118, 0.12);
-      font-size: 0.84rem;
-      display: inline-flex;
+    /* BIG HEADER PHONE BAR */
+    .header-phone-bar {
+      margin-top: 10px;
+      border-radius: 18px;
+      padding: 10px 16px;
+      background: linear-gradient(135deg, #074678, #0b6fb8);
+      color: #ffffff;
+      display: flex;
+      flex-wrap: wrap;
       align-items: center;
+      justify-content: space-between;
       gap: 8px;
-      white-space: nowrap;
+      box-shadow: 0 10px 26px rgba(5, 37, 78, 0.45);
     }
 
-    .header-phone-cta span.icon {
+    .header-phone-bar-text {
       font-size: 0.9rem;
     }
 
-    .header-phone-number {
+    .header-phone-bar-text strong {
+      color: #fef3d9;
+    }
+
+    .header-phone-bar-call {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 999px;
+      background: #fef3d9;
+      color: #1f2933;
+      padding: 7px 14px;
+      font-size: 0.9rem;
       font-weight: 700;
-      color: var(--primary-dark);
+      box-shadow: 0 6px 16px rgba(86,60,11,0.35);
+    }
+
+    .header-phone-bar-call span.icon {
+      font-size: 1rem;
+    }
+
+    .header-phone-bar-call a {
+      color: #1f2933;
+      text-decoration: none;
     }
 
     /* BREADCRUMBS */
     .breadcrumbs {
-      margin: 4px 0 14px;
+      margin: 6px 0 14px;
       font-size: 0.8rem;
       color: var(--muted);
     }
@@ -218,10 +217,9 @@
 
     /* HERO */
     .hero-card {
-      background:
-        radial-gradient(circle at 20% 0, #e3f2ff 0, #f1f6ff 38%, #ffffff 100%);
+      background: #ffffff;
       border-radius: var(--radius-xl);
-      padding: 26px 24px 24px;
+      padding: 24px 22px 22px;
       display: grid;
       grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
       gap: 26px;
@@ -231,27 +229,15 @@
       overflow: hidden;
     }
 
-    .hero-card::before,
-    .hero-card::after {
+    .hero-card::before {
       content: "";
       position: absolute;
+      width: 260px;
+      height: 260px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(159,218,246,0.38) 0, rgba(159,218,246,0) 70%);
-      z-index: 0;
-    }
-
-    .hero-card::before {
-      width: 220px;
-      height: 220px;
-      top: -60px;
-      right: -40px;
-    }
-
-    .hero-card::after {
-      width: 160px;
-      height: 160px;
-      bottom: -50px;
-      left: -30px;
+      background: radial-gradient(circle, rgba(159,218,246,0.4) 0, rgba(159,218,246,0) 70%);
+      top: -110px;
+      right: -90px;
     }
 
     .hero-inner {
@@ -263,10 +249,10 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 4px 10px;
+      padding: 4px 11px;
       border-radius: 999px;
       font-size: 0.78rem;
-      background: rgba(11, 94, 168, 0.06);
+      background: #e3f2ff;
       color: var(--primary);
       margin-bottom: 10px;
     }
@@ -278,12 +264,12 @@
       width: 18px;
       height: 18px;
       border-radius: 999px;
-      background: #e0fbf7;
+      background: #e3faf6;
       font-size: 0.7rem;
     }
 
     h1.hero-title {
-      font-size: 2.02rem;
+      font-size: 2.04rem;
       margin: 0 0 8px;
       letter-spacing: 0.01em;
     }
@@ -306,7 +292,7 @@
     .hero-lists {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px 20px;
+      gap: 8px 18px;
       margin-bottom: 14px;
       padding-left: 0;
     }
@@ -345,7 +331,7 @@
       font-size: 0.94rem;
       font-weight: 600;
       border: none;
-      box-shadow: 0 8px 18px rgba(7, 60, 118, 0.5);
+      box-shadow: 0 8px 18px rgba(7, 70, 136, 0.5);
       cursor: pointer;
     }
 
@@ -362,29 +348,62 @@
       color: var(--primary-dark);
     }
 
-    .hero-inline-image {
-      margin-top: 8px;
-      border-radius: 18px;
+    /* HERO IMAGE PANEL */
+    .hero-image-panel {
+      position: relative;
+      z-index: 1;
+      border-radius: 20px;
       overflow: hidden;
-      border: 1px solid rgba(186, 206, 230, 0.7);
-      box-shadow: 0 10px 26px rgba(11, 94, 168, 0.25);
-      background: #e0f2ff;
+      background: #e3f2ff;
+      box-shadow: 0 14px 30px rgba(11, 111, 184, 0.4);
+      border: 1px solid rgba(173,201,233,0.9);
     }
 
-    .hero-inline-image img {
-      display: block;
+    .hero-image-panel img {
       width: 100%;
       height: auto;
+      display: block;
     }
 
+    .hero-image-banner {
+      position: absolute;
+      left: 12px;
+      bottom: 12px;
+      right: 12px;
+      border-radius: 16px;
+      background: rgba(3, 21, 46, 0.85);
+      color: #f9fbff;
+      padding: 8px 10px;
+      font-size: 0.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+    }
+
+    .hero-image-banner strong {
+      color: #fef3d9;
+    }
+
+    .hero-image-banner span.tag {
+      border-radius: 999px;
+      padding: 4px 8px;
+      background: rgba(16,179,161,0.18);
+      border: 1px solid rgba(16,179,161,0.7);
+      font-size: 0.75rem;
+    }
+
+    /* BUBBLE PANEL */
     .bubble-panel {
-      background: linear-gradient(145deg, #0b5ea8 0%, #0fb5a8 55%, #53d0f0 100%);
+      margin-top: 16px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #0b6fb8, #10b3a1);
       color: #ffffff;
-      border-radius: 24px;
-      padding: 18px 18px 16px;
-      box-shadow: 0 12px 28px rgba(3, 28, 58, 0.5);
+      padding: 16px 16px 14px;
       position: relative;
       overflow: hidden;
+      box-shadow: 0 12px 30px rgba(6, 54, 92, 0.65);
     }
 
     .bubble-panel::before,
@@ -396,65 +415,59 @@
     }
 
     .bubble-panel::before {
-      width: 110px;
-      height: 110px;
-      top: -40px;
-      right: -20px;
+      width: 120px;
+      height: 120px;
+      top: -50px;
+      right: -30px;
     }
 
     .bubble-panel::after {
       width: 80px;
       height: 80px;
       bottom: -40px;
-      left: -10px;
+      left: -20px;
+    }
+
+    .bubble-inner {
+      position: relative;
+      z-index: 1;
     }
 
     .bubble-heading {
       font-size: 1rem;
       font-weight: 700;
-      margin-bottom: 8px;
-      color: #ffffff;
-      position: relative;
-      z-index: 1;
+      margin-bottom: 6px;
     }
 
     .bubble-main {
       font-size: 0.9rem;
-      margin-bottom: 8px;
-      color: #f0f8ff;
-      position: relative;
-      z-index: 1;
+      margin-bottom: 6px;
     }
 
     .bubble-sub {
       font-size: 0.8rem;
-      color: #dbeafe;
-      position: relative;
-      z-index: 1;
+      color: #e7f3ff;
     }
 
     .bubble-chip-row {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      margin-top: 10px;
-      position: relative;
-      z-index: 1;
+      margin-top: 8px;
     }
 
     .bubble-chip {
       font-size: 0.7rem;
-      padding: 4px 9px;
+      padding: 4px 8px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.3);
-      backdrop-filter: blur(6px);
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.5);
     }
 
     /* TRUST STRIP */
     .trust-strip {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
       gap: 12px;
       margin-bottom: 22px;
     }
@@ -467,15 +480,15 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      border: 1px solid rgba(11, 94, 168, 0.08);
-      box-shadow: 0 4px 10px rgba(15, 35, 52, 0.06);
+      border: 1px solid rgba(11, 111, 184, 0.12);
+      box-shadow: 0 4px 12px rgba(15, 35, 52, 0.06);
     }
 
     .trust-pill span.icon {
       width: 20px;
       height: 20px;
       border-radius: 999px;
-      background: #e0fbf7;
+      background: #e3faf6;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -488,13 +501,13 @@
       border-radius: var(--radius-lg);
       padding: 22px 20px;
       margin-bottom: 22px;
-      box-shadow: 0 8px 20px rgba(24, 41, 65, 0.06);
+      box-shadow: 0 8px 18px rgba(24, 41, 65, 0.06);
     }
 
     .section-card h2 {
       margin-top: 0;
       margin-bottom: 8px;
-      font-size: 1.2rem;
+      font-size: 1.22rem;
     }
 
     .section-eyebrow {
@@ -507,24 +520,24 @@
 
     .two-col {
       display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      grid-template-columns: minmax(0, 1.45fr) minmax(0, 1.05fr);
       gap: 18px;
     }
 
     .map-wrap {
-      border-radius: 16px;
+      border-radius: 18px;
       overflow: hidden;
       border: 1px solid rgba(150, 176, 204, 0.85);
-      box-shadow: 0 6px 16px rgba(7, 51, 88, 0.25);
+      box-shadow: 0 8px 20px rgba(7, 51, 88, 0.25);
       background: #dbeafe;
     }
 
     .inline-image-card {
       margin-top: 14px;
-      border-radius: 16px;
+      border-radius: 18px;
       overflow: hidden;
-      border: 1px solid rgba(221,226,236,0.9);
-      background: #f4f8ff;
+      border: 1px solid rgba(221,226,236,0.95);
+      background: #f3f7ff;
       box-shadow: 0 6px 16px rgba(15,35,52,0.12);
     }
 
@@ -564,7 +577,7 @@
     /* PROCESS */
     .process-steps {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 14px;
       margin-top: 14px;
     }
@@ -597,7 +610,6 @@
       color: var(--primary-dark);
     }
 
-    /* PRICING */
     .pricing-highlight {
       display: flex;
       flex-wrap: wrap;
@@ -612,7 +624,7 @@
       font-size: 0.82rem;
       border: 1px solid rgba(245,180,75,0.7);
       color: #8c5b10;
-      box-shadow: 0 4px 12px rgba(145,96,25,0.12);
+      box-shadow: 0 4px 12px rgba(145,96,25,0.16);
     }
 
     .small-note {
@@ -621,14 +633,13 @@
       margin-top: 6px;
     }
 
-    /* SERVICE AREAS */
     .service-columns {
       column-count: 2;
       column-gap: 20px;
       font-size: 0.9rem;
     }
 
-    /* STATE DIRECTORY */
+    /* DIRECTORY */
     .directory-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -641,7 +652,7 @@
       padding: 6px 10px;
       border-radius: 999px;
       background: #f4f8ff;
-      border: 1px solid rgba(11,94,168,0.18);
+      border: 1px solid rgba(11,111,184,0.18);
       display: inline-block;
       white-space: nowrap;
       box-shadow: 0 3px 8px rgba(15,35,52,0.06);
@@ -734,7 +745,7 @@
       cursor: pointer;
       font-weight: 600;
       font-size: 0.92rem;
-      box-shadow: 0 6px 16px rgba(15, 181, 168, 0.5);
+      box-shadow: 0 6px 16px rgba(16,179,161,0.55);
     }
 
     .submit-btn:hover {
@@ -747,11 +758,10 @@
       margin-top: 6px;
     }
 
-    /* CTA STRIP */
     .cta-strip {
       margin-top: 4px;
       padding: 14px 16px;
-      background: linear-gradient(135deg, #031933, #0b5ea8);
+      background: linear-gradient(135deg, #031933, #0b6fb8);
       border-radius: 18px;
       color: #ffffff;
       display: flex;
@@ -775,7 +785,7 @@
       font-weight: 600;
     }
 
-    /* POPUP FORM TRIGGER */
+    /* POPUP BUTTON & MODAL */
     .floating-quote-btn {
       position: fixed;
       right: 18px;
@@ -789,7 +799,7 @@
       padding: 10px 18px;
       font-size: 0.9rem;
       font-weight: 600;
-      background: linear-gradient(135deg, var(--accent), #11c9ba);
+      background: linear-gradient(135deg, var(--accent), #10c3b2);
       color: #ffffff;
       box-shadow: 0 10px 26px rgba(7, 109, 110, 0.55);
       cursor: pointer;
@@ -799,7 +809,6 @@
       opacity: 0.96;
     }
 
-    /* MODAL */
     .modal-backdrop {
       position: fixed;
       inset: 0;
@@ -848,7 +857,7 @@
       color: var(--muted);
     }
 
-    /* FOOTER + SITEMAP */
+    /* FOOTER & SITEMAP */
     footer {
       margin-top: 24px;
       font-size: 0.82rem;
@@ -919,49 +928,42 @@
     }
 
     /* RESPONSIVE */
-    @media (max-width: 840px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-      }
-
+    @media (max-width: 880px) {
       .hero-card,
       .two-col,
       .faq-grid {
         grid-template-columns: minmax(0, 1fr);
       }
-
       .service-columns {
         column-count: 1;
       }
+    }
 
-      .header-phone-cta {
-        margin-top: 6px;
+    @media (max-width: 720px) {
+      .header-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        justify-content: flex-start;
       }
     }
 
-    @media (max-width: 520px) {
+    @media (max-width: 540px) {
       .hero-lists {
         grid-template-columns: minmax(0, 1fr);
       }
-
       .floating-quote-btn {
         right: 10px;
         bottom: 10px;
       }
-
       .floating-quote-btn button {
         padding-inline: 14px;
       }
     }
   </style>
 
-  <!-- SCHEMA MARKUP (kept and still valid) -->
+  <!-- SCHEMA MARKUP (from your original, still valid) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -1092,34 +1094,39 @@
 <div class="page-shell">
 
   <header>
-    <div class="brand-mark">
-      <div class="brand-badge">
-        <div class="brand-badge-icon">🛁</div>
-        <div class="brand-badge-text">
-          <div class="brand-badge-text-main">Walk In Tub NY</div>
-          <div class="brand-badge-text-sub">Safer New York bathing solutions</div>
+    <div class="header-row">
+      <div class="brand-block">
+        <div class="brand-mark">
+          <div class="brand-mark-icon">🛁</div>
+        </div>
+        <div>
+          <div class="brand-text-main">Walk In Tub NY</div>
+          <div class="brand-text-sub">
+            New York walk in tubs & roll in showers for seniors, caregivers & families.
+          </div>
         </div>
       </div>
-      <div>
-        <div class="brand-text-main">Walk In Tub NY</div>
-        <div class="brand-text-sub">New York walk in tubs & roll in showers for seniors, caregivers & families</div>
-      </div>
+
+      <nav aria-label="Primary navigation">
+        <a href="#why-ny" class="nav-link">Why NY walk in tubs</a>
+        <a href="#process" class="nav-link">How it works</a>
+        <a href="#pricing" class="nav-link">Pricing & options</a>
+        <a href="#service-areas" class="nav-link">Service areas</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="#contact" class="nav-link-cta">Get my free quote</a>
+      </nav>
     </div>
 
-    <nav aria-label="Primary navigation">
-      <a href="#why-ny" class="nav-link">Why NY walk in tubs</a>
-      <a href="#process" class="nav-link">How it works</a>
-      <a href="#pricing" class="nav-link">Pricing & options</a>
-      <a href="#service-areas" class="nav-link">Service areas</a>
-      <a href="blog.html" class="nav-link">Blog</a>
-      <a href="#contact" class="nav-link nav-link-cta">Get my free quote</a>
-
-      <div class="header-phone-cta">
-        <span class="icon">📞</span>
-        <span>Call now:</span>
-        <a class="header-phone-number" href="tel:+18887792284">1-888-779-2284 (BATH)</a>
+    <div class="header-phone-bar">
+      <div class="header-phone-bar-text">
+        Talk with a friendly New York bath safety specialist today.
+        <strong>No pushy in-home sales visits — honest guidance first.</strong>
       </div>
-    </nav>
+      <div class="header-phone-bar-call">
+        <span class="icon">📞</span>
+        <span>Call now: <a href="tel:+18887792284">1-888-779-2284 (BATH)</a></span>
+      </div>
+    </div>
   </header>
 
   <nav class="breadcrumbs" aria-label="Breadcrumb">
@@ -1163,13 +1170,25 @@
             Or call <strong><a href="tel:+18887792284">1-888-779-2284 (BATH)</a></strong> for live help 7 days a week.
           </div>
         </div>
-
-        <div class="hero-inline-image">
-          <img src="images/walk-in-tub-ny-bathroom.jpg" alt="Walk in tub and roll in shower in a New York bathroom" />
-        </div>
       </div>
 
-      <aside class="bubble-panel" aria-label="Hydrotherapy benefits">
+      <aside class="hero-image-panel" aria-label="New York walk in tub bathroom example">
+        <!-- INLINE HERO IMAGE: upload this to /images -->
+        <img src="images/walk-in-tub-ny-bathroom.jpg"
+             alt="New York bathroom with a walk in tub and roll in shower" />
+        <div class="hero-image-banner">
+          <div>
+            <strong>Walk in tub + roll in shower layouts for New York homes.</strong><br />
+            Safer entry, built-in seating and hydrotherapy comfort without leaving home.
+          </div>
+          <span class="tag">DIY delivery or professional installation</span>
+        </div>
+      </aside>
+    </section>
+
+    <!-- HYDROTHERAPY PANEL -->
+    <section class="bubble-panel" aria-label="Hydrotherapy benefits">
+      <div class="bubble-inner">
         <div class="bubble-heading">Hydrotherapy relief for real New York schedules</div>
         <div class="bubble-main">
           Between icy winters, train delays, crowded commutes and busy caregiving responsibilities, your body rarely
@@ -1187,7 +1206,7 @@
           <div class="bubble-chip">Fast-drain technology</div>
           <div class="bubble-chip">Built-in grab bars</div>
         </div>
-      </aside>
+      </div>
     </section>
 
     <!-- TRUST STRIP -->
@@ -1278,10 +1297,12 @@
             </div>
           </div>
 
+          <!-- INLINE IMAGE 2 -->
           <div class="inline-image-card">
-            <img src="images/walk-in-tub-vs-shower-ny.jpg" alt="Walk in tub on one side and roll in shower on the other in a New York bathroom" />
+            <img src="images/walk-in-tub-and-shower-ny-layout.jpg"
+                 alt="Walk in tub on one side and roll in shower on the other side in a New York bathroom" />
             <div class="inline-image-caption">
-              Many New York families choose a walk in tub for soaking and a nearby roll in shower for quicker, everyday use.
+              Many New York families choose a walk in tub for relaxing soaks and a nearby roll in shower for everyday use.
             </div>
           </div>
         </div>
@@ -1295,7 +1316,7 @@
       </div>
     </section>
 
-    <!-- CHOOSING THE RIGHT TUB -->
+    <!-- PRODUCT / LIFESTYLE SECTION WITH IMAGE -->
     <section class="section-card">
       <div class="section-eyebrow">Choosing your system</div>
       <h2>Walk in tubs, roll in showers & combo setups for New York homes</h2>
@@ -1341,6 +1362,15 @@
             Space-saving footprints for apartments and co-ops and wider, reinforced models designed to support larger
             body types. We take real-world measurements so you know what truly fits through your New York doorways.
           </p>
+        </div>
+      </div>
+
+      <!-- INLINE IMAGE 3 -->
+      <div class="inline-image-card" style="margin-top:18px;">
+        <img src="images/new-york-skyline-bath-safety.jpg"
+             alt="New York skyline above an illustration of a safer bathroom layout" />
+        <div class="inline-image-caption">
+          From NYC apartments to Upstate farmhouses, we help adapt bathrooms so New Yorkers can age in place safely.
         </div>
       </div>
     </section>
@@ -1771,7 +1801,7 @@
 
 </div>
 
-<!-- POPUP DATA FORM (matches your preferred style concept) -->
+<!-- POPUP DATA FORM -->
 <div class="modal-backdrop" id="quoteModal" aria-hidden="true">
   <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <button class="modal-close" type="button" aria-label="Close" onclick="closeQuoteModal()">×</button>
