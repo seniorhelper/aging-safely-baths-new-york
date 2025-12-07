@@ -13,22 +13,20 @@
   <meta property="og:description" content="Safer New York walk in tubs and roll in showers with hydrotherapy comfort. Call 1-888-779-2284 (BATH) or request a free quote online today." />
   <meta property="og:url" content="https://walkintubny.com/" />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0932/0841/2441/files/best_walk_in_tub_image.jpg?v=1743199631" />
 
   <style>
     :root {
       --bg: #f5f8ff;
       --bg-alt: #ffffff;
-      --primary: #1166c4;
-      --primary-dark: #0a437f;
+      --primary: #1559b3;
+      --primary-dark: #0d3976;
       --accent: #ffc857;
-      --accent-soft: #fff5d9;
-      --accent-border: #f1b640;
-      --text: #132033;
+      --accent-soft: #fff6dd;
+      --danger: #c53030;
+      --text: #182133;
       --muted: #64748b;
       --border: #dde4f0;
-      --radius-lg: 20px;
-      --radius-xl: 28px;
-      --shadow-soft: 0 14px 35px rgba(15, 35, 70, 0.14);
       --max-width: 1180px;
     }
 
@@ -37,7 +35,7 @@
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top left, #e0efff 0, #f5f8ff 35%, #ffffff 100%);
+      background: linear-gradient(to bottom, #e7f1ff 0, #f5f8ff 180px, #ffffff 100%);
       color: var(--text);
       line-height: 1.6;
     }
@@ -51,52 +49,42 @@
     .page-shell {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 22px 16px 70px;
+      padding: 18px 16px 80px;
     }
 
-    /* HEADER */
+    /* HEADER – clean, rectangular, no ball */
     header {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 18px;
-      margin-bottom: 10px;
+      padding: 10px 16px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08);
+      margin-bottom: 14px;
     }
 
-    .brand {
+    .brand-block {
       display: flex;
-      align-items: center;
-      gap: 12px;
+      flex-direction: column;
+      gap: 2px;
     }
 
-    .brand-mark {
-      width: 52px;
-      height: 52px;
-      border-radius: 18px;
-      background: radial-gradient(circle at 20% 10%, #ffffff 0, #bfe3ff 30%, #1166c4 70%, #0a2540 100%);
-      position: relative;
-      box-shadow: 0 6px 18px rgba(9, 46, 90, 0.5);
-      overflow: hidden;
-    }
-    .brand-mark::after {
-      content: "";
-      position: absolute;
-      inset: 12px;
-      border-radius: 16px;
-      border: 2px solid rgba(255,255,255,0.7);
-    }
-
-    .brand-text-main {
+    .brand-name {
       font-size: 1.25rem;
       font-weight: 780;
       letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--primary-dark);
     }
-    .brand-text-sub {
+
+    .brand-tagline {
       font-size: 0.8rem;
       color: var(--muted);
     }
 
-    .header-cta-wrap {
+    .header-right {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
@@ -104,123 +92,133 @@
       text-align: right;
     }
 
-    .header-phone-label {
+    .header-label {
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.13em;
       color: var(--muted);
     }
 
-    .header-phone {
+    .header-phone-bar {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: linear-gradient(135deg, #1166c4, #0a437f);
+      padding: 7px 14px;
+      border-radius: 6px;
+      background: linear-gradient(90deg, #1559b3, #0d3976);
       color: #ffffff;
-      padding: 8px 16px;
-      border-radius: 999px;
-      box-shadow: 0 10px 22px rgba(9, 55, 115, 0.5);
       font-size: 0.92rem;
       font-weight: 700;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.45);
     }
-
-    .header-phone a {
+    .header-phone-bar a {
       color: #ffffff;
       text-decoration: none;
       font-size: 1.02rem;
     }
 
-    .header-tagline {
+    .header-subline {
       font-size: 0.8rem;
       color: var(--muted);
     }
 
-    /* BREADCRUMBS */
+    /* SIMPLE NAV */
+    .main-nav {
+      margin: 10px 2px 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+    .main-nav a {
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+    }
+    .main-nav a:hover {
+      border-color: var(--primary);
+      text-decoration: none;
+      color: var(--primary);
+    }
+
     .breadcrumbs {
-      margin: 4px 0 16px;
       font-size: 0.8rem;
       color: var(--muted);
+      margin-bottom: 14px;
     }
     .breadcrumbs span {
       color: var(--primary-dark);
       font-weight: 500;
     }
 
-    /* HERO */
+    /* HERO – SafeStep-style light layout */
     .hero {
-      background: linear-gradient(135deg, #ffffff 0, #f5f8ff 60%, #e9f2ff 100%);
-      border-radius: var(--radius-xl);
-      padding: 26px 24px 24px;
       display: grid;
-      grid-template-columns: minmax(0, 1.45fr) minmax(0, 1.1fr);
-      gap: 26px;
-      box-shadow: var(--shadow-soft);
-      margin-bottom: 24px;
-      position: relative;
-      overflow: hidden;
+      grid-template-columns: minmax(0, 1.45fr) minmax(0, 1.05fr);
+      gap: 24px;
+      padding: 24px 22px;
+      border-radius: 14px;
+      background: #ffffff;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+      margin-bottom: 22px;
     }
 
-    .hero-pill {
+    .hero-top-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 5px 12px;
+      padding: 4px 10px;
       border-radius: 999px;
-      background: rgba(17,102,196,0.06);
+      background: #e5efff;
       font-size: 0.78rem;
       color: var(--primary-dark);
       margin-bottom: 10px;
     }
-    .hero-pill span {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 18px;
-      height: 18px;
-      border-radius: 999px;
-      background: #e0f2ff;
-      font-size: 0.65rem;
-      font-weight: 700;
+    .hero-top-pill span {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border-radius: 3px;
+      background: #1559b3;
     }
 
     .hero h1 {
       margin: 0 0 8px;
-      font-size: 2.1rem;
+      font-size: 2.05rem;
       letter-spacing: 0.01em;
     }
-    .hero h1 .highlight { color: var(--primary); }
+    .hero h1 .highlight {
+      color: var(--primary);
+    }
 
-    .hero-subcopy {
+    .hero-sub {
       font-size: 0.96rem;
       color: var(--muted);
       margin-bottom: 14px;
       max-width: 540px;
     }
-    .hero-subcopy strong {
-      color: var(--primary-dark);
-    }
+    .hero-sub strong { color: var(--primary-dark); }
 
     .hero-list {
-      display: grid;
-      grid-template-columns: repeat(2,minmax(0,1fr));
-      gap: 8px 18px;
       margin: 0 0 14px;
       padding-left: 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 18px;
     }
     .hero-list li {
       list-style: none;
-      font-size: 0.9rem;
       position: relative;
-      padding-left: 22px;
-      color: var(--text);
+      padding-left: 20px;
+      font-size: 0.9rem;
     }
     .hero-list li::before {
-      content: "✔";
+      content: "✓";
       position: absolute;
       left: 0;
       top: 0;
       font-size: 0.78rem;
-      color: #0fa39a;
+      color: #16a085;
       font-weight: 700;
     }
 
@@ -229,144 +227,123 @@
       flex-wrap: wrap;
       gap: 10px;
       align-items: center;
-      margin-top: 6px;
+      margin-top: 4px;
     }
 
     .btn-primary {
-      border-radius: 999px;
-      background: linear-gradient(135deg, #ffc857, #f1b640);
-      color: #1b2738;
-      padding: 10px 22px;
-      font-size: 0.94rem;
-      font-weight: 700;
       border: none;
+      border-radius: 6px;
+      padding: 10px 22px;
+      font-size: 0.95rem;
+      font-weight: 700;
       cursor: pointer;
-      box-shadow: 0 9px 20px rgba(209, 149, 26, 0.55);
+      background: linear-gradient(90deg, #ffc857, #f2a93b);
+      color: #1b2738;
+      box-shadow: 0 8px 20px rgba(245, 184, 72, 0.5);
     }
-    .btn-primary:hover { opacity: 0.96; }
+    .btn-primary:hover { opacity: 0.97; }
 
-    .hero-phone-inline {
+    .hero-inline-phone {
       font-size: 0.86rem;
       color: var(--muted);
     }
-    .hero-phone-inline strong {
-      color: var(--primary-dark);
-    }
+    .hero-inline-phone strong { color: var(--primary-dark); }
 
     .hero-media {
-      position: relative;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-end;
     }
-
-    .hero-image-wrap {
-      border-radius: 24px;
+    .hero-image {
+      width: 100%;
+      border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 16px 32px rgba(9,40,80,0.45);
-      border: 4px solid #ffffff;
-      background: #000;
+      border: 3px solid #ffffff;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.45);
     }
-    .hero-image-wrap img {
+    .hero-image img {
       display: block;
       width: 100%;
       height: auto;
     }
 
-    .hero-badge {
-      position: absolute;
-      bottom: 12px;
-      left: 8px;
-      background: rgba(255,255,255,0.94);
-      padding: 8px 12px;
-      border-radius: 999px;
+    .hero-tag {
+      padding: 7px 10px;
+      border-radius: 6px;
+      background: #f1f5f9;
       font-size: 0.8rem;
-      box-shadow: 0 8px 18px rgba(15,35,70,0.4);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .hero-badge span {
-      width: 18px;
-      height: 18px;
-      border-radius: 999px;
-      background: #0fa39a;
+      color: var(--muted);
+      max-width: 280px;
     }
 
     /* TRUST STRIP */
     .trust-strip {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 12px;
       margin-bottom: 22px;
     }
     .trust-pill {
+      padding: 8px 12px;
+      border-radius: 8px;
       background: #ffffff;
-      border-radius: 999px;
-      padding: 8px 14px;
-      font-size: 0.8rem;
+      border: 1px solid #e2e8f0;
+      font-size: 0.82rem;
       display: flex;
       align-items: center;
       gap: 8px;
-      border: 1px solid rgba(17,102,196,0.08);
-      box-shadow: 0 4px 10px rgba(15, 35, 52, 0.06);
+      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.06);
     }
-    .trust-pill span.icon {
-      width: 20px;
-      height: 20px;
-      border-radius: 999px;
-      background: #e0f2ff;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.78rem;
+    .trust-pill span {
+      font-size: 1rem;
     }
 
-    /* GENERIC SECTIONS */
+    /* SECTIONS */
     .section {
-      background: var(--bg-alt);
-      border-radius: var(--radius-lg);
-      padding: 22px 20px;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px 18px 18px;
       margin-bottom: 22px;
-      box-shadow: 0 10px 26px rgba(18,34,70,0.08);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
     }
+
     .section-eyebrow {
       font-size: 0.8rem;
       text-transform: uppercase;
-      letter-spacing: 0.09em;
+      letter-spacing: 0.1em;
       color: var(--muted);
       margin-bottom: 4px;
     }
     .section h2 {
       margin: 0 0 10px;
-      font-size: 1.3rem;
+      font-size: 1.28rem;
     }
 
     .two-col {
       display: grid;
-      grid-template-columns: minmax(0,1.42fr) minmax(0,1.1fr);
+      grid-template-columns: minmax(0, 1.45fr) minmax(0, 1.05fr);
       gap: 18px;
     }
 
     .map-wrap {
-      border-radius: 18px;
+      border-radius: 12px;
       overflow: hidden;
-      border: 1px solid rgba(148,181,214,0.85);
-      box-shadow: 0 8px 20px rgba(7,50,92,0.28);
-      background: #dbeafe;
+      border: 1px solid #cbd5f5;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.18);
     }
 
     .bullet-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 14px;
-      margin-top: 14px;
+      margin-top: 12px;
     }
     .mini-card {
-      background: #f7f9ff;
-      border-radius: 14px;
-      padding: 12px 12px 11px;
-      border: 1px solid rgba(221,226,236,0.95);
+      padding: 10px 10px 9px;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      background: #f8fafc;
       font-size: 0.88rem;
     }
     .mini-card h3 {
@@ -378,122 +355,127 @@
     /* HYDROTHERAPY STRIP */
     .hydro-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 14px;
-      margin-top: 12px;
+      margin-top: 10px;
+      font-size: 0.9rem;
     }
     .hydro-card {
       background: #f0fbff;
-      border-radius: 16px;
-      padding: 12px 12px 10px;
-      border: 1px solid #c5ecff;
-      font-size: 0.9rem;
+      border-radius: 10px;
+      border: 1px solid #bae6fd;
+      padding: 10px 10px 9px;
     }
     .hydro-card strong {
       display: block;
       margin-bottom: 4px;
-      color: #0a6c83;
+      color: #03627e;
       font-size: 0.9rem;
-    }
-
-    /* “CHART” STRIP */
-    .chart-strip {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
-      gap: 14px;
-      margin-top: 10px;
-      font-size: 0.86rem;
-    }
-    .chart-card {
-      background: #f9fafb;
-      border-radius: 12px;
-      padding: 10px 12px;
-      border: 1px solid #e2e8f0;
-    }
-    .chart-label {
-      font-weight: 600;
-      margin-bottom: 4px;
-      color: var(--primary-dark);
-    }
-    .chart-bar-wrap {
-      position: relative;
-      height: 8px;
-      border-radius: 999px;
-      background: #e5edff;
-      overflow: hidden;
-      margin-bottom: 4px;
-    }
-    .chart-bar {
-      position: absolute;
-      inset: 0;
-      border-radius: 999px;
-      background: linear-gradient(90deg,#ffc857,#f97316);
     }
 
     /* IMAGE ROW */
     .image-row {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 12px;
       margin-top: 12px;
     }
     .image-card {
-      background: #f7f9ff;
-      border-radius: 16px;
-      padding: 10px;
-      border: 1px solid #dde5f0;
-      box-shadow: 0 6px 16px rgba(15,35,70,0.08);
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      background: #f8fafc;
+      padding: 8px;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
     }
     .image-card img {
       display: block;
       width: 100%;
-      border-radius: 12px;
+      border-radius: 8px;
       margin-bottom: 6px;
     }
     .image-caption {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: var(--muted);
     }
 
     /* PROCESS */
     .process-steps {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 14px;
-      margin-top: 12px;
+      margin-top: 10px;
     }
     .process-step {
-      background: #f7f9ff;
-      border-radius: 16px;
-      padding: 13px 12px;
-      border: 1px solid var(--border);
-      position: relative;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      background: #f8fafc;
+      padding: 10px 11px 10px;
       font-size: 0.9rem;
+      position: relative;
     }
-    .step-number {
+    .step-num {
       position: absolute;
-      top: 9px;
-      right: 12px;
+      top: 8px;
+      right: 10px;
       font-size: 0.78rem;
       font-weight: 700;
       color: var(--primary);
-      background: #e0edff;
-      padding: 2px 8px;
+      background: #e0ecff;
+      padding: 2px 7px;
       border-radius: 999px;
+    }
+    .process-step h3 {
+      margin: 0 0 6px;
+      font-size: 0.98rem;
+      color: var(--primary-dark);
+    }
+
+    /* COMPARISON STRIP */
+    .compare-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+      font-size: 0.86rem;
+    }
+    .compare-card {
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      background: #f9fafb;
+      padding: 9px 10px;
+    }
+    .compare-label {
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--primary-dark);
+    }
+    .compare-bar-wrap {
+      position: relative;
+      height: 8px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: #e5edff;
+      margin-bottom: 4px;
+    }
+    .compare-bar {
+      position: absolute;
+      inset: 0;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #ffc857, #f97316);
     }
 
     /* SERVICE AREAS */
     .service-columns {
       column-count: 2;
-      column-gap: 22px;
+      column-gap: 20px;
       font-size: 0.9rem;
     }
 
     .cta-strip {
       margin-top: 12px;
-      padding: 14px 16px;
-      background: linear-gradient(135deg,#0a2540,#1166c4);
-      border-radius: 18px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #0d3976, #1559b3);
       color: #ffffff;
       display: flex;
       flex-wrap: wrap;
@@ -503,19 +485,30 @@
       font-size: 0.9rem;
     }
     .cta-strip strong { color: #ffe8b8; }
+    .cta-strip button {
+      border-radius: 6px;
+      border: none;
+      background: #ffc857;
+      color: #1b2738;
+      padding: 8px 18px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 5px 13px rgba(245, 184, 72, 0.6);
+    }
 
-    /* FAQ + CONTACT */
+    /* FAQ + FORM SECTION */
     .faq-grid {
       display: grid;
-      grid-template-columns: minmax(0,1.45fr) minmax(0,1.05fr);
+      grid-template-columns: minmax(0, 1.45fr) minmax(0, 1.05fr);
       gap: 18px;
     }
 
     details {
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: #f7f9ff;
-      padding: 11px 12px;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      background: #f8fafc;
+      padding: 9px 10px;
       margin-bottom: 8px;
       font-size: 0.9rem;
     }
@@ -525,7 +518,7 @@
       color: var(--primary-dark);
       list-style: none;
       position: relative;
-      padding-right: 20px;
+      padding-right: 18px;
     }
     summary::marker { display: none; }
     summary::after {
@@ -537,17 +530,14 @@
       font-weight: 700;
     }
     details[open] summary::after { content: "–"; }
-    details p {
-      margin-top: 8px;
-      color: var(--text);
-    }
+    details p { margin-top: 6px; }
 
     .form-card {
-      background: #f5f9ff;
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      padding: 16px 14px 14px;
-      box-shadow: 0 8px 18px rgba(12,35,63,0.14);
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      background: #f5f8ff;
+      padding: 14px 12px 12px;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
       font-size: 0.9rem;
     }
     .form-card h3 {
@@ -559,136 +549,139 @@
       font-size: 0.8rem;
       color: var(--muted);
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
     input, textarea, select {
       width: 100%;
       padding: 8px 9px;
-      border-radius: 9px;
-      border: 1px solid #c7d2e5;
-      margin-bottom: 10px;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      margin-bottom: 9px;
       font: inherit;
     }
-    textarea { min-height: 90px; resize: vertical; }
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
 
     .submit-btn {
-      background: #0fa39a;
-      padding: 9px 20px;
-      border-radius: 999px;
+      border-radius: 6px;
       border: none;
+      background: #16a085;
       color: #ffffff;
-      cursor: pointer;
-      font-weight: 650;
+      padding: 9px 18px;
       font-size: 0.9rem;
-      box-shadow: 0 7px 16px rgba(15,163,154,0.5);
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 7px 16px rgba(22, 160, 133, 0.6);
     }
     .submit-btn:hover { opacity: 0.97; }
 
     .form-note {
       font-size: 0.78rem;
       color: var(--muted);
-      margin-top: 6px;
+      margin-top: 5px;
     }
 
-    /* POPUP MODAL */
+    /* POPUP MODAL (same styling idea as your favorite one) */
     .modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(15, 23, 42, 0.6);
+      background: rgba(15, 23, 42, 0.7);
       display: none;
       align-items: center;
       justify-content: center;
       padding: 16px;
-      z-index: 40;
+      z-index: 50;
     }
     .modal-overlay.active { display: flex; }
     .modal {
       max-width: 480px;
       width: 100%;
       background: #ffffff;
-      border-radius: 20px;
-      padding: 18px 16px 16px;
-      box-shadow: 0 18px 40px rgba(15,23,42,0.5);
+      border-radius: 12px;
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.65);
+      padding: 16px 14px 14px;
       position: relative;
     }
     .modal h2 {
       margin: 0 0 6px;
-      font-size: 1.1rem;
+      font-size: 1.12rem;
     }
     .modal p {
       font-size: 0.88rem;
       color: var(--muted);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .modal-close {
       position: absolute;
-      right: 12px;
-      top: 10px;
-      border-radius: 999px;
-      border: none;
+      right: 10px;
+      top: 8px;
       width: 26px;
       height: 26px;
+      border-radius: 999px;
+      border: none;
+      background: #e5e7eb;
       cursor: pointer;
-      background: #f1f5f9;
       font-weight: 700;
-      color: #64748b;
+      color: #4b5563;
     }
 
-    /* STICKY BOTTOM CTA */
+    /* STICKY CTA BAR */
     .sticky-cta {
       position: fixed;
-      inset-inline: 0;
+      left: 0;
+      right: 0;
       bottom: 0;
-      background: rgba(10,37,64,0.96);
+      background: rgba(13, 25, 48, 0.96);
       color: #ffffff;
-      display: flex;
-      justify-content: center;
-      z-index: 30;
+      z-index: 40;
     }
     .sticky-inner {
       max-width: var(--max-width);
-      width: 100%;
-      padding: 8px 16px 10px;
+      margin: 0 auto;
+      padding: 6px 16px 8px;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
-      font-size: 0.86rem;
+      gap: 8px;
+      font-size: 0.84rem;
     }
     .sticky-inner strong { color: #ffe8b8; }
     .btn-sticky {
-      border-radius: 999px;
+      border-radius: 6px;
       border: none;
       background: #ffc857;
       color: #1b2738;
-      padding: 7px 16px;
-      font-size: 0.86rem;
+      padding: 6px 14px;
+      font-size: 0.84rem;
       font-weight: 700;
       cursor: pointer;
-      box-shadow: 0 6px 14px rgba(209,149,26,0.7);
+      box-shadow: 0 5px 12px rgba(245, 184, 72, 0.7);
     }
 
-    /* FOOTER & HTML SITEMAP */
+    /* FOOTER + HTML SITEMAP – no “microsites” wording */
     footer {
       margin-top: 26px;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: var(--muted);
     }
     .footer-sitemap {
-      margin-bottom: 12px;
-      padding: 14px 14px 10px;
-      border-radius: 16px;
-      background: #f7f9ff;
-      border: 1px solid #dde4f0;
+      padding: 12px 12px 10px;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      background: #f8fafc;
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
-      gap: 8px 18px;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 10px 18px;
+      margin-bottom: 10px;
     }
-    .footer-column-title {
+    .footer-heading {
       font-weight: 600;
-      margin-bottom: 4px;
-      color: var(--primary-dark);
       font-size: 0.84rem;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
     }
     .footer-sitemap a {
       display: block;
@@ -701,22 +694,21 @@
       header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 8px;
       }
-      .header-cta-wrap {
+      .header-right {
         align-items: flex-start;
         text-align: left;
       }
-      .hero,
-      .two-col,
-      .faq-grid {
-        grid-template-columns: minmax(0,1fr);
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
       }
       .hero-media {
         order: -1;
+        align-items: stretch;
       }
-      .hero-list {
-        grid-template-columns: minmax(0,1fr);
+      .two-col,
+      .faq-grid {
+        grid-template-columns: minmax(0, 1fr);
       }
       .service-columns {
         column-count: 1;
@@ -728,8 +720,12 @@
     }
 
     @media (max-width: 520px) {
-      .hero { padding: 20px 16px 18px; }
-      .hero h1 { font-size: 1.7rem; }
+      .hero {
+        padding: 18px 14px;
+      }
+      .hero h1 {
+        font-size: 1.75rem;
+      }
     }
   </style>
 
@@ -746,9 +742,7 @@
         "telephone": "+1-888-779-2284",
         "logo": "https://cdn.shopify.com/s/files/1/0932/0841/2441/files/best_walk_in_tub_image.jpg?v=1743199631",
         "sameAs": [
-          "https://www.agingsafelybaths.com",
-          "https://walkintubs4less.com",
-          "https://seniorwalkinbathtubs.com"
+          "https://www.agingsafelybaths.com"
         ]
       },
       {
@@ -779,7 +773,7 @@
             "name": "Do you install walk in tubs across New York?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Our licensed and insured partners can install walk in tubs and roll in showers in many areas of New York, including New York City, Long Island, Hudson Valley, Capital Region and Upstate communities. In more remote areas we can provide ship-to-door delivery along with guidance for your local installer."
+              "text": "Yes. Our licensed and insured partners can install walk in tubs and roll in showers in many areas of New York, including New York City, Long Island, Hudson Valley, Capital Region, and Upstate communities. In more remote areas we can provide ship-to-door delivery along with guidance for your local installer."
             }
           },
           {
@@ -787,7 +781,7 @@
             "name": "What is the typical price range for a walk in tub in NY?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Most New York homeowners invest somewhere between a basic soaking walk in tub and a fully loaded hydrotherapy system with air and water jets. Your final price depends on tub size, features, electrical and plumbing needs and how complex it is to get the tub into your home. We provide clear written quotes so you know exactly what to expect before you decide."
+              "text": "Most New York homeowners invest somewhere between a basic soaking walk in tub and a fully loaded hydrotherapy system with air and water jets. Your final price depends on tub size, features, electrical and plumbing needs, and how complex it is to get the tub into your home. We provide clear written quotes so you know exactly what to expect before you decide."
             }
           },
           {
@@ -833,112 +827,101 @@
 <div class="page-shell">
 
   <header>
-    <div class="brand">
-      <div class="brand-mark"></div>
-      <div>
-        <div class="brand-text-main">Walk In Tub NY</div>
-        <div class="brand-text-sub">New York walk in tubs & roll in showers</div>
-      </div>
+    <div class="brand-block">
+      <div class="brand-name">Walk In Tub NY</div>
+      <div class="brand-tagline">New York walk in tubs & roll in showers for safer bathing</div>
     </div>
-
-    <div class="header-cta-wrap">
-      <div class="header-phone-label">Questions? Talk to a bath safety specialist</div>
-      <div class="header-phone">
+    <div class="header-right">
+      <div class="header-label">Questions? Talk to a bath safety specialist</div>
+      <div class="header-phone-bar">
         Call&nbsp;<a href="tel:1-888-779-2284">1-888-779-2284</a>&nbsp;<span>(BATH)</span>
       </div>
-      <div class="header-tagline">Licensed installation where available · Ship-to-door across NY</div>
+      <div class="header-subline">Licensed installation where available · Ship-to-door across NY</div>
     </div>
   </header>
 
-  <nav class="breadcrumbs" aria-label="Breadcrumb">
-    <a href="/">Home</a> › <span>Walk In Tub NY</span>
+  <nav class="main-nav" aria-label="Primary navigation">
+    <a href="#why-ny">Why walk in tubs</a>
+    <a href="#hydrotherapy">Hydrotherapy</a>
+    <a href="#process">How it works</a>
+    <a href="#pricing">Pricing & options</a>
+    <a href="#service-areas">Service areas</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Request info</a>
   </nav>
+
+  <div class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="/">Home</a> › <span>Walk In Tub NY</span>
+  </div>
 
   <main>
 
     <!-- HERO -->
     <section class="hero" id="top">
       <div>
-        <div class="hero-pill">
-          <span>NY</span> Safer bathing for New York seniors & caregivers
+        <div class="hero-top-pill">
+          <span></span> Safer bathing for New York seniors & caregivers
         </div>
 
-        <h1>
-          Safer <span class="highlight">walk in tub NY</span> solutions for comfort, confidence & peace of mind
-        </h1>
+        <h1>Safer <span class="highlight">walk in tub NY</span> solutions for comfort, confidence & peace of mind</h1>
 
-        <p class="hero-subcopy">
-          Every year, thousands of New Yorkers visit the ER after a bathroom fall. A properly sized walk in tub or
-          roll in shower turns a slippery, stressful bathroom into a calm, supported space.
-          <strong>Our job is to help you or your loved one stay independent at home as long as possible.</strong>
+        <p class="hero-sub">
+          Every year, thousands of New Yorkers visit the ER after a bathroom fall. A properly sized walk in tub or roll
+          in shower turns a slippery, stressful bathroom into a calm, supported space.
+          <strong>Our goal is to help you or your loved one stay independent at home as long as possible.</strong>
         </p>
 
         <ul class="hero-list">
-          <li>Low step entry and slip-resistant floors to reduce fall risk</li>
-          <li>Chair-height seat so you can bathe without fighting to stand up</li>
-          <li>Hydrotherapy jets that help ease tired, arthritic joints after long New York days</li>
-          <li>New York licensed & insured installation crews where available</li>
-          <li>Ship-to-your-door delivery with guidance for your local installer</li>
-          <li>Friendly, no-pressure conversations focused on what is best for your family</li>
+          <li>Low step entry and textured floors to help reduce fall risk.</li>
+          <li>Chair-height seat so you can bathe without fighting to get back up.</li>
+          <li>Hydrotherapy jets to help ease tired, arthritic joints after long New York days.</li>
+          <li>New York licensed & insured installation crews where available.</li>
+          <li>Ship-to-your-door delivery with documentation for your local installer.</li>
+          <li>Friendly, no-pressure conversations focused on what is best for your family.</li>
         </ul>
 
         <div class="hero-cta-row">
-          <button class="btn-primary js-open-modal">
-            Get my free New York walk in tub quote →
-          </button>
-          <div class="hero-phone-inline">
+          <button class="btn-primary js-open-modal">Get my free New York walk in tub quote →</button>
+          <div class="hero-inline-phone">
             Or call <strong><a href="tel:1-888-779-2284">1-888-779-2284 (BATH)</a></strong> for live help 7 days a week.
           </div>
         </div>
       </div>
 
-      <aside class="hero-media" aria-label="Walk in tub with hydrotherapy">
-        <div class="hero-image-wrap">
+      <aside class="hero-media" aria-label="Walk in tub example">
+        <div class="hero-image">
           <img src="https://cdn.shopify.com/s/files/1/0932/0841/2441/files/best_walk_in_tub_image.jpg?v=1743199631"
-               alt="Modern acrylic walk in tub installed for New York homeowner" loading="lazy" />
+               alt="Modern acrylic walk in tub installed in a New York home" loading="lazy" />
         </div>
-        <div class="hero-badge">
-          <span></span>
-          Water-tested walk in tubs · Hydrotherapy comfort
+        <div class="hero-tag">
+          Water-tested, factory-inspected walk in tubs designed to support safer bathing and soothing hydrotherapy.
         </div>
       </aside>
     </section>
 
     <!-- TRUST STRIP -->
-    <section class="trust-strip" aria-label="Trust points">
-      <div class="trust-pill">
-        <span class="icon">🛁</span>
-        Walk in tubs, roll in showers & combo systems for New York bathrooms
-      </div>
-      <div class="trust-pill">
-        <span class="icon">🛠</span>
-        Licensed, insured installation partners where available
-      </div>
-      <div class="trust-pill">
-        <span class="icon">📦</span>
-        Ship-to-your-door delivery with installer guidance statewide
-      </div>
-      <div class="trust-pill">
-        <span class="icon">❤️</span>
-        Compassionate, no-pressure guidance for seniors & caregivers
-      </div>
+    <section class="trust-strip" aria-label="Reasons to trust Walk In Tub NY">
+      <div class="trust-pill"><span>🛁</span>Walk in tubs, roll in showers & tub-shower combos for New York bathrooms.</div>
+      <div class="trust-pill"><span>🛠</span>Licensed, insured installation partners in many New York regions.</div>
+      <div class="trust-pill"><span>📦</span>Ship-to-door delivery with guidance for your own plumber or contractor.</div>
+      <div class="trust-pill"><span>❤️</span>Compassionate guidance for seniors, caregivers & medical professionals.</div>
     </section>
 
-    <!-- WHY NY WALK IN TUBS -->
+    <!-- WHY NY -->
     <section class="section" id="why-ny">
       <div class="section-eyebrow">Why walk in tubs in New York</div>
-      <h2>Why New York homeowners are replacing slippery tubs with walk in tubs & roll in showers</h2>
+      <h2>Why New York homeowners are upgrading to walk in tubs & roll in showers</h2>
 
       <div class="two-col">
         <div>
           <p>
-            New York homes range from compact city apartments and co-ops to historic brownstones, Hudson Valley
-            farmhouses and lakeside cottages. Most of those bathrooms were designed decades ago, long before anyone
-            thought about aging in place, bad knees or balance issues.
+            New York homes range from city apartments and co-ops to historic brownstones, Hudson Valley farmhouses and
+            lakeside cottages. Most of those bathrooms were designed decades ago, long before anyone thought about
+            aging in place, mobility challenges or joint pain.
           </p>
           <p>
-            High tub walls, slick tile and tight spaces turn a quick shower into an obstacle course. Add in icy
-            winters, bulky winter clothing and mobility challenges and it is easy to see why bathroom falls are such a
+            High tub walls, slick tile and narrow layouts turn a quick rinse into an obstacle course. Add in icy
+            sidewalks, heavy winter clothing and balance issues and it’s easy to see why bathroom falls are such a
             serious risk for New Yorkers.
           </p>
           <p>
@@ -947,39 +930,27 @@
             and easy-reach controls keep you supported from the moment you step in until you dry off.
           </p>
           <p>
-            For many New York families, the biggest benefit is peace of mind. Adult children can worry less when a
-            parent lives alone upstate. Spouses can help with bathing in safer, more dignified ways. And seniors who
-            once avoided bathing out of fear can enjoy a relaxing soak again.
+            For many families, the biggest benefit is peace of mind. Adult children can worry less when a parent lives
+            alone upstate. Spouses can help with bathing in safer, more dignified ways. And seniors who once avoided
+            bathing out of fear can finally enjoy a relaxing soak again.
           </p>
 
           <div class="bullet-grid">
             <div class="mini-card">
-              <h3>Reduce bathroom fall risk</h3>
-              <p>
-                Low step entry, textured floors and thoughtfully placed grab bars help reduce the most common causes of
-                bathroom falls — especially in tight New York bathrooms.
-              </p>
+              <h3>Lower fall risk in tight spaces</h3>
+              <p>Low step entry, textured floors and grab bars help reduce the most common causes of bathroom falls.</p>
             </div>
             <div class="mini-card">
-              <h3>Support sore joints & circulation</h3>
-              <p>
-                Hydrotherapy jets and deep, warm water help ease stiffness after standing jobs, subway stairs, shoveling
-                snow or caring for others all day.
-              </p>
+              <h3>Comfort for joints & circulation</h3>
+              <p>Warm water and jets help ease stiffness after walking city blocks, shoveling snow or standing on your feet all day.</p>
             </div>
             <div class="mini-card">
               <h3>Stay in your NY home longer</h3>
-              <p>
-                A safer bathroom can delay or prevent a move to assisted living. That means more years in the home and
-                neighborhood you love — whether you’re in Brooklyn, Buffalo or Binghamton.
-              </p>
+              <p>A safer bathroom can delay or prevent a move to assisted living so you can stay in the home you love.</p>
             </div>
             <div class="mini-card">
-              <h3>Solutions for almost any footprint</h3>
-              <p>
-                From compact 48–52 inch models for apartments to larger bariatric tubs and roll in showers, we help you
-                match the right system to your exact New York bathroom.
-              </p>
+              <h3>Options for almost any layout</h3>
+              <p>From compact apartment footprints to larger, accessible baths, we match solutions to real-world spaces.</p>
             </div>
           </div>
         </div>
@@ -992,63 +963,67 @@
         </aside>
       </div>
 
-      <div class="chart-strip" aria-label="Comparison of options">
-        <div class="chart-card">
-          <div class="chart-label">Slippery standard tub</div>
-          <div class="chart-bar-wrap"><div class="chart-bar" style="width: 88%; background: linear-gradient(90deg,#ef4444,#b91c1c);"></div></div>
-          <div>Higher step, slick floor and limited grab bars often mean the greatest fall risk.</div>
+      <div class="compare-strip" aria-label="Comparison of standard tubs vs walk in tubs">
+        <div class="compare-card">
+          <div class="compare-label">Standard slippery tub</div>
+          <div class="compare-bar-wrap">
+            <div class="compare-bar" style="width: 88%; background: linear-gradient(90deg,#f97373,#b91c1c);"></div>
+          </div>
+          <div>High step, slick floor and limited grab bars often mean the greatest bathroom fall risk.</div>
         </div>
-        <div class="chart-card">
-          <div class="chart-label">Walk in tub NY upgrade</div>
-          <div class="chart-bar-wrap"><div class="chart-bar" style="width: 30%;"></div></div>
-          <div>Low step entry, sturdy seating and hydrotherapy focus on safety, comfort and confidence.</div>
+        <div class="compare-card">
+          <div class="compare-label">Walk in tub NY upgrade</div>
+          <div class="compare-bar-wrap">
+            <div class="compare-bar" style="width: 35%;"></div>
+          </div>
+          <div>Low entry, seating and hydrotherapy focus on safety, comfort and confidence.</div>
         </div>
-        <div class="chart-card">
-          <div class="chart-label">Roll in & low threshold showers</div>
-          <div class="chart-bar-wrap"><div class="chart-bar" style="width: 40%;"></div></div>
-          <div>Ideal for wheelchair users and those who prefer showering over soaking.</div>
+        <div class="compare-card">
+          <div class="compare-label">Roll in & low threshold showers</div>
+          <div class="compare-bar-wrap">
+            <div class="compare-bar" style="width: 45%;"></div>
+          </div>
+          <div>Ideal for wheelchair users or anyone who prefers showering over soaking.</div>
         </div>
       </div>
     </section>
 
-    <!-- HYDROTHERAPY & IMAGE STRIP -->
+    <!-- HYDROTHERAPY -->
     <section class="section" id="hydrotherapy">
       <div class="section-eyebrow">Hydrotherapy relief</div>
-      <h2>Hydrotherapy walk in tubs designed for real New York schedules</h2>
+      <h2>Hydrotherapy walk in tubs built for real New York schedules</h2>
 
       <p>
-        Between harsh winters, long commutes, caregiving responsibilities and the general pace of New York life, most
-        bodies rarely get a true break. A hydrotherapy walk in tub gives you a quiet, private space to reset joints,
-        muscles and mindset without leaving home.
+        Between harsh winters, long commutes, caregiving duties and the general pace of New York life, most bodies
+        rarely get a real break. A hydrotherapy walk in tub gives you a quiet, private space to reset joints, muscles
+        and mindset without leaving home.
       </p>
 
       <div class="hydro-grid">
         <div class="hydro-card">
           <strong>Warm water buoyancy</strong>
-          The water supports a portion of your body weight, which can reduce pressure on hips, knees and ankles so
-          movement feels easier.
+          The water supports part of your body weight, which can reduce pressure on hips, knees and ankles so movement
+          feels easier.
         </div>
         <div class="hydro-card">
           <strong>Air & water massage jets</strong>
-          Targeted jets help relax tight muscles, improve circulation and take the edge off daily stiffness — especially
-          on cold New York nights.
+          Targeted jets help relax tight muscles, improve circulation and take the edge off daily stiffness.
         </div>
         <div class="hydro-card">
           <strong>Heated surfaces & fast drains</strong>
-          Optional heated seats and backs keep you warm while the tub fills, and fast-drain options help shorten the
-          time you spend seated after bathing.
+          Optional heated seats and backs keep you warm while filling, and fast-drain options shorten the time seated
+          after bathing.
         </div>
         <div class="hydro-card">
-          <strong>Simple, reachable controls</strong>
-          Easy-turn knobs and push-button controls are designed for aging hands, so you do not have to fight your tub to
-          enjoy it.
+          <strong>Easy-to-use controls</strong>
+          Simple knobs and push buttons are designed for aging hands so you do not have to fight your tub to enjoy it.
         </div>
       </div>
 
       <div class="image-row">
         <figure class="image-card">
           <img src="https://cdn.shopify.com/s/files/1/0932/0841/2441/files/walk_in_bathtubs_image.jpg?v=1742856552"
-               alt="Walk in tubs with clean, bright acrylic finish" loading="lazy" />
+               alt="Bright acrylic walk in tubs with clean lines" loading="lazy" />
           <figcaption class="image-caption">
             Bright, easy-to-clean acrylic walk in tubs pair well with modern New York bathrooms.
           </figcaption>
@@ -1056,9 +1031,9 @@
 
         <figure class="image-card">
           <img src="https://cdn.shopify.com/s/files/1/0932/0841/2441/files/walk_in_tub_cost_image.jpg?v=1740635256"
-               alt="Walk in tub filled with water during factory hydrotherapy testing" loading="lazy" />
+               alt="Walk in tub filled with water during factory leak and jet testing" loading="lazy" />
           <figcaption class="image-caption">
-            Every tub is water tested before leaving the factory so you can feel confident about performance.
+            Every tub is fully filled and tested before leaving the factory so you can soak with confidence.
           </figcaption>
         </figure>
 
@@ -1066,7 +1041,7 @@
           <img src="https://cdn.shopify.com/s/files/1/0932/0841/2441/files/handicap_bathtubs_image.jpg?v=1740633644"
                alt="Handicap transfer walk in bathtub with support bar for wheelchair users" loading="lazy" />
           <figcaption class="image-caption">
-            Handicap and transfer-style walk in tubs can make bathing more manageable for wheelchair users.
+            Transfer and handicap-friendly tubs can make bathing more manageable for wheelchair users and caregivers.
           </figcaption>
         </figure>
       </div>
@@ -1078,13 +1053,13 @@
       <h2>Our simple 3-step New York walk in tub process</h2>
 
       <p>
-        You do not have to start with a model in mind. We walk you through a short, respectful process so you can make a
-        clear decision without high-pressure sales tactics or surprise add-ons.
+        You do not have to start with a specific model in mind. We walk you through a short, respectful process so you
+        can make a clear decision without high-pressure sales tactics or surprise add-ons.
       </p>
 
       <div class="process-steps">
         <div class="process-step">
-          <span class="step-number">Step 1</span>
+          <span class="step-num">Step 1</span>
           <h3>15–20 minute New York bath safety consultation</h3>
           <p>
             We start with a quick phone call to understand your mobility, health concerns and what makes bathing hard
@@ -1092,13 +1067,13 @@
             hallways and stairs.
           </p>
           <p>
-            From there we narrow down a few best-fit walk in tubs and roll in showers that match your space, budget and
+            From there we narrow down a few best-fit walk in tubs and roll in showers that match your layout, budget and
             goals.
           </p>
         </div>
 
         <div class="process-step">
-          <span class="step-number">Step 2</span>
+          <span class="step-num">Step 2</span>
           <h3>Clear visuals, options & transparent pricing</h3>
           <p>
             We send you simple information outlining each recommended option, including photos, features, pros, cons and
@@ -1106,22 +1081,22 @@
             trusted advisors.
           </p>
           <p>
-            If you want to adjust features or compare multiple layouts — like a walk in tub in one bath and a roll in
-            shower in another — we refine options until they feel right.
+            If you want to adjust features or compare multiple layouts — for example, a walk in tub in one bath and a
+            roll in shower in another — we refine options until they feel right.
           </p>
         </div>
 
         <div class="process-step">
-          <span class="step-number">Step 3</span>
+          <span class="step-num">Step 3</span>
           <h3>Licensed installation or ship-to-door delivery</h3>
           <p>
-            In many parts of New York we can provide licensed and insured installation teams that handle everything from
-            removing your old tub to final clean-up. In other areas, we ship the tub to your home and coordinate with
-            your preferred contractor or plumber.
+            In many parts of New York we can provide licensed and insured installation teams that handle everything
+            from removing your old tub to final clean-up. In other areas, we ship the tub to your home and coordinate
+            with your preferred contractor or plumber.
           </p>
           <p>
-            Either way, our goal is a smooth, code-compliant installation that protects your product warranty and gives
-            you a finished bath you are proud to show family and friends.
+            Either way, the goal is a smooth, code-compliant installation that protects your warranty and leaves you
+            with a bath you are proud to show family and friends.
           </p>
         </div>
       </div>
@@ -1140,47 +1115,34 @@
       <p>
         Basic soaking walk in tubs are usually the most budget-friendly. Hydrotherapy models with air and water jets,
         heated surfaces and extra comfort features cost more but can provide more day-to-day relief. Apartment and
-        co-op projects sometimes include extra steps working with building management or boards, which we help you
-        navigate.
+        co-op projects may include extra steps working with building management, which we help you navigate.
       </p>
 
-      <div class="bullet-grid" style="margin-top: 12px;">
+      <div class="bullet-grid" style="margin-top:10px;">
         <div class="mini-card">
           <h3>Classic soaker walk in tubs</h3>
-          <p>
-            Deep soaking tubs with a secure door, built-in seat and grab bars are ideal if you want safer entry and
-            exit but do not necessarily need jets.
-          </p>
+          <p>Deep soaking tubs with doors, built-in seats and grab bars for safer entry and exit.</p>
         </div>
         <div class="mini-card">
           <h3>Hydrotherapy & air jet systems</h3>
-          <p>
-            Combine heat, buoyancy and targeted jets to help ease aches and stiffness after long New York days. Many
-            customers say they sleep better on soak nights.
-          </p>
+          <p>Combine heat, buoyancy and jets to help ease aches and stiffness after long New York days.</p>
         </div>
         <div class="mini-card">
           <h3>Front-entry & transfer tubs</h3>
-          <p>
-            Front-entry or transfer-style models make it easier for wheelchair users and people who need caregiver
-            assistance to move in and out of the tub safely.
-          </p>
+          <p>Front-entry and transfer-style models support wheelchair users and those who need hands-on help.</p>
         </div>
         <div class="mini-card">
           <h3>Roll in & low threshold showers</h3>
-          <p>
-            Barrier-free and low-step showers are perfect for those who prefer showering. Add seats, grab bars and
-            handheld showers for flexible use.
-          </p>
+          <p>Barrier-free and low-step showers with seats, grab bars and handheld wands for flexible use.</p>
         </div>
       </div>
 
       <div class="image-row">
         <figure class="image-card">
           <img src="https://cdn.shopify.com/s/files/1/0932/0841/2441/files/front_entry_walk_in_bathtub_image.jpg?v=1740634834"
-               alt="Front entry walk in bathtub ideal for tight New York bathrooms" loading="lazy" />
+               alt="Front-entry walk in bathtub ideal for tight New York bathrooms" loading="lazy" />
           <figcaption class="image-caption">
-            Front-entry walk in tubs work well where side-access models are difficult to fit.
+            Front-entry walk in tubs can be a smart option for tight New York bathrooms and hallways.
           </figcaption>
         </figure>
 
@@ -1188,13 +1150,13 @@
           <img src="https://cdn.shopify.com/s/files/1/0932/0841/2441/files/acrylic_walk_in_tubs_image.jpg?v=1740640108"
                alt="Acrylic walk in tubs in a bright bathroom setting" loading="lazy" />
           <figcaption class="image-caption">
-            Durable acrylic shells are easy to clean and resist stains, which is ideal for busy New York households.
+            Durable acrylic shells are easy to clean and resist stains, ideal for busy households.
           </figcaption>
         </figure>
 
         <figure class="image-card">
           <img src="https://cdn.shopify.com/s/files/1/0932/0841/2441/files/walk_in_tub_guide_image.png?v=1741582973"
-               alt="Walk in tub guide helping New York homeowners compare models" loading="lazy" />
+               alt="Walk in tub buying guide for New York homeowners" loading="lazy" />
           <figcaption class="image-caption">
             We walk you through pros, cons and pricing so you can compare models without pressure.
           </figcaption>
@@ -1224,7 +1186,7 @@
       </p>
 
       <p style="font-size:0.86rem;color:var(--muted);">
-        You can also explore our Aging Safely Baths New York locations page for additional details:
+        You can also explore the Aging Safely Baths New York locations page for additional details:
         <a href="https://www.agingsafelybaths.com/about/locations/new-york/" target="_blank" rel="noopener">
           New York walk in tubs & roll in showers
         </a>.
@@ -1236,13 +1198,11 @@
           <strong>Call <a href="tel:1-888-779-2284" style="color:#ffe8b8;">1-888-779-2284 (BATH)</a></strong> or
           request a free quote below.
         </p>
-        <button class="btn-primary js-open-modal" style="box-shadow:none;">
-          Start my New York quote →
-        </button>
+        <button class="js-open-modal">Start my New York quote →</button>
       </div>
     </section>
 
-    <!-- FAQ + CONTACT -->
+    <!-- FAQ & CONTACT -->
     <section class="section" id="faq">
       <div class="section-eyebrow">Questions & answers</div>
       <h2>New York walk in tub FAQ</h2>
@@ -1263,8 +1223,8 @@
             <summary>What is the typical price range for a walk in tub in NY?</summary>
             <p>
               Pricing depends on the size of the unit, the features you choose and how complex your bathroom is. A basic
-              soaker walk in tub with minimal electrical work will cost less than a large hydrotherapy model with
-              extensive tile or plumbing changes. During your quote, we outline a realistic price range so you can plan
+              soaker walk in tub with minimal electrical work will normally cost less than a large hydrotherapy model
+              with more plumbing or tile changes. During your quote, we outline a realistic price range so you can plan
               with confidence.
             </p>
           </details>
@@ -1283,7 +1243,7 @@
             <p>
               Absolutely. Some New Yorkers prefer a roll in or low threshold shower instead of a deep soaker, especially
               if they use a wheelchair, walker or shower chair. We can show you both walk in tub and roll in shower
-              designs so you can choose what works best for your routines and bathroom layout.
+              designs so you can choose what fits your routines best.
             </p>
           </details>
 
@@ -1324,12 +1284,12 @@
           </details>
         </div>
 
-        <aside aria-label="Request information form">
+        <aside id="contact" aria-label="Request information form">
           <div class="form-card">
             <h3>Request your New York walk in tub or shower info</h3>
             <p>
-              Share a few details below and a bath safety specialist will follow up with tailored options for your New
-              York home. No pushy in-home sales visits — just honest, helpful guidance.
+              Share a few details and a bath safety specialist will follow up with options tailored to your New York
+              home. No pushy in-home sales visits — just honest, helpful guidance.
             </p>
 
             <form action="mailto:sales@agingsafelybaths.com" method="post" enctype="text/plain">
@@ -1356,7 +1316,7 @@
               </select>
 
               <label for="details-main">Tell us about your bathroom & goals</label>
-              <textarea id="details-main" name="Details" placeholder="Example: 60 inch tub in a small NYC bathroom, want safer entry for my mom with arthritis."></textarea>
+              <textarea id="details-main" name="Details" placeholder="Example: 60 inch tub in a small NYC bath, want safer entry for my mom with arthritis."></textarea>
 
               <button type="submit" class="submit-btn">Send my New York bath safety request →</button>
 
@@ -1372,20 +1332,22 @@
 
   </main>
 
-  <!-- HTML SITEMAP FOOTER -->
+  <!-- HTML SITEMAP FOOTER (no “microsites” wording) -->
   <footer>
     <div class="footer-sitemap">
       <div>
-        <div class="footer-column-title">Walk In Tub NY</div>
-        <a href="#top">Home – New York walk in tubs</a>
+        <div class="footer-heading">On this site</div>
+        <a href="#top">Home – Walk In Tub NY</a>
         <a href="#why-ny">Why walk in tubs in New York</a>
         <a href="#hydrotherapy">Hydrotherapy benefits</a>
+        <a href="#process">How our process works</a>
         <a href="#pricing">Pricing & options</a>
-        <a href="#service-areas">Service areas</a>
-        <a href="#faq">FAQ & contact</a>
+        <a href="#service-areas">New York service areas</a>
+        <a href="#faq">Walk in tub FAQ</a>
+        <a href="#contact">Request information</a>
       </div>
       <div>
-        <div class="footer-column-title">Aging Safely Baths</div>
+        <div class="footer-heading">Aging Safely Baths</div>
         <a href="https://www.agingsafelybaths.com" target="_blank" rel="noopener">AgingSafelyBaths.com home</a>
         <a href="https://www.agingsafelybaths.com/walk-in-tubs/" target="_blank" rel="noopener">Walk in tubs</a>
         <a href="https://www.agingsafelybaths.com/handicap-showers/" target="_blank" rel="noopener">Roll in & handicap showers</a>
@@ -1393,20 +1355,11 @@
         <a href="https://www.agingsafelybaths.com/about/locations/new-york/" target="_blank" rel="noopener">New York locations page</a>
       </div>
       <div>
-        <div class="footer-column-title">Related micro sites</div>
-        <a href="https://seniorwalkinbathtubs.com" target="_blank" rel="noopener">SeniorWalkInBathtubs.com</a>
-        <a href="https://walkintubsforelderly.com" target="_blank" rel="noopener">WalkInTubsForElderly.com</a>
-        <a href="https://walkintubwithshower.com" target="_blank" rel="noopener">WalkInTubWithShower.com</a>
-        <a href="https://handicapbathtubs.com" target="_blank" rel="noopener">HandicapBathtubs.com</a>
-        <a href="https://walkintubs4less.com" target="_blank" rel="noopener">WalkInTubs4Less.com</a>
-      </div>
-      <div>
-        <div class="footer-column-title">Popular state locations</div>
-        <a href="https://www.agingsafelybaths.com/about/locations/florida/" target="_blank" rel="noopener">Florida walk in tubs</a>
-        <a href="https://www.agingsafelybaths.com/about/locations/texas/" target="_blank" rel="noopener">Texas walk in tubs</a>
-        <a href="https://www.agingsafelybaths.com/about/locations/colorado/" target="_blank" rel="noopener">Colorado walk in tubs</a>
-        <a href="https://www.agingsafelybaths.com/about/locations/california/" target="_blank" rel="noopener">California walk in tubs</a>
-        <a href="https://www.agingsafelybaths.com/about/locations/arizona/" target="_blank" rel="noopener">Arizona walk in tubs</a>
+        <div class="footer-heading">Popular resource links</div>
+        <a href="https://www.cdc.gov/homeandrecafety/falls/" target="_blank" rel="noopener">CDC: older adult fall facts</a>
+        <a href="https://aging.ny.gov/" target="_blank" rel="noopener">New York State Office for the Aging</a>
+        <a href="https://www.nia.nih.gov/health/falls-and-fall-prevention-older-adults" target="_blank" rel="noopener">NIA fall prevention tips</a>
+        <a href="https://www.agingsafelybaths.com/faqs/" target="_blank" rel="noopener">Aging Safely Baths FAQ</a>
       </div>
     </div>
 
@@ -1416,14 +1369,12 @@
   </footer>
 </div>
 
-<!-- POPUP MODAL (same fields as main form, used by buttons) -->
+<!-- POPUP MODAL -->
 <div class="modal-overlay" id="quote-modal">
   <div class="modal">
     <button class="modal-close" type="button" aria-label="Close quote form">×</button>
     <h2>Get your free New York walk in tub quote</h2>
-    <p>
-      Complete this quick form and a bath safety specialist will follow up with options tailored to your New York home.
-    </p>
+    <p>Complete this quick form and a bath safety specialist will follow up with options tailored to your New York home.</p>
 
     <form action="mailto:sales@agingsafelybaths.com" method="post" enctype="text/plain">
       <input type="hidden" name="Subject" value="WalkInTubNY.com popup lead" />
@@ -1449,19 +1400,18 @@
       </select>
 
       <label for="details-popup">Tell us about your bathroom & goals</label>
-      <textarea id="details-popup" name="Details" placeholder="Example: Looking for safer tub for my dad in Queens, small alcove tub now."></textarea>
+      <textarea id="details-popup" name="Details" placeholder="Example: Safer tub for my dad in Queens, narrow 60 inch alcove now."></textarea>
 
-      <button type="submit" class="submit-btn">Send my free NY quote →</button>
+      <button type="submit" class="submit-btn">Send my free New York quote →</button>
 
       <div class="form-note">
-        Prefer to talk? Call <strong><a href="tel:1-888-779-2284">1-888-779-2284</a></strong> any day and mention this
-        WalkInTubNY.com form.
+        Prefer to talk? Call <strong><a href="tel:1-888-779-2284">1-888-779-2284</a></strong> and mention this WalkInTubNY.com popup.
       </div>
     </form>
   </div>
 </div>
 
-<!-- STICKY CTA -->
+<!-- STICKY CTA BAR -->
 <div class="sticky-cta">
   <div class="sticky-inner">
     <div>
@@ -1483,6 +1433,7 @@
 
     openButtons.forEach(btn => btn.addEventListener('click', openModal));
     closeButton.addEventListener('click', closeModal);
+
     modal.addEventListener('click', function(e) {
       if (e.target === modal) closeModal();
     });
