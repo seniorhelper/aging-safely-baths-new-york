@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <title>Walk In Tub NY | NY Walk In Bath & Roll In Showers</title>
-  <meta name="description" content="Walk in tub NY specialists helping New York homeowners choose the right NY walk in bath or roll in shower. Hydrotherapy comfort, licensed installation where available, or ship-to-door delivery across New York." />
+  <meta name="description" content="Walk in tub NY specialists helping New York homeowners with safer NY walk in bath solutions and roll in showers. Hydrotherapy comfort, licensed installation where available, or ship-to-door delivery across New York." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="canonical" href="https://walkintubny.com/" />
   <meta name="keywords" content="walk in tub NY, NY walk in bath, New York walk in tubs, walk in tubs New York, roll in showers NY, handicap showers New York, senior walk in tub NY, hydrotherapy tubs NY, walk in bathtubs New York" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Walk In Tub NY | NY Walk In Bath & Roll In Showers" />
-  <meta property="og:description" content="Safer New York walk in tubs, NY walk in bath options, and roll in showers with hydrotherapy comfort. Call 1-888-779-2284 (BATH) or request a free quote online today." />
+  <meta property="og:description" content="Safer New York walk in tubs, NY walk in bath options and roll in showers with hydrotherapy comfort. Call 1-888-779-2284 (BATH) or request a free quote online today." />
   <meta property="og:url" content="https://walkintubny.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0932/0841/2441/files/best_walk_in_tub_image.jpg?v=1743199631" />
@@ -35,7 +35,10 @@
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: linear-gradient(to bottom, #e7f1ff 0, #f5f8ff 180px, #ffffff 100%);
+      background:
+        radial-gradient(circle at top left, rgba(148, 197, 255, 0.16) 0, transparent 50%),
+        radial-gradient(circle at top right, rgba(125, 211, 252, 0.16) 0, transparent 55%),
+        linear-gradient(to bottom, #e7f1ff 0, #f5f8ff 180px, #ffffff 100%);
       color: var(--text);
       line-height: 1.6;
     }
@@ -52,26 +55,17 @@
       padding: 18px 16px 80px;
     }
 
-    /* HEADER – sticky, logo, no generic ball */
-    .site-header-wrap {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      background: linear-gradient(to bottom, rgba(231,241,255,0.96), rgba(245,248,255,0.96), rgba(255,255,255,0.98));
-      backdrop-filter: blur(6px);
-      padding-bottom: 10px;
-      margin-bottom: 16px;
-    }
-
+    /* HEADER – uses Aging Safely logo, no generic ball */
     header {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 18px;
-      padding: 8px 16px;
+      padding: 10px 16px;
       background: #ffffff;
-      border-radius: 6px;
-      box-shadow: 0 3px 12px rgba(15, 23, 42, 0.12);
+      border-radius: 10px;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08);
+      margin-bottom: 14px;
     }
 
     .brand-left {
@@ -80,14 +74,10 @@
       gap: 12px;
     }
 
-    .brand-logo {
-      width: 120px;
-      max-width: 32vw;
-    }
-    .brand-logo img {
+    .header-logo {
+      height: 44px;
+      width: auto;
       display: block;
-      width: 100%;
-      height: auto;
     }
 
     .brand-block {
@@ -97,7 +87,7 @@
     }
 
     .brand-name {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 780;
       letter-spacing: 0.03em;
       text-transform: uppercase;
@@ -135,15 +125,12 @@
       font-size: 0.92rem;
       font-weight: 700;
       box-shadow: 0 6px 16px rgba(15, 23, 42, 0.45);
+      white-space: nowrap;
     }
     .header-phone-bar a {
       color: #ffffff;
       text-decoration: none;
       font-size: 1.02rem;
-      font-weight: 800;
-    }
-    .header-phone-bar span {
-      opacity: 0.85;
     }
 
     .header-subline {
@@ -153,13 +140,12 @@
 
     /* SIMPLE NAV */
     .main-nav {
-      margin: 10px 2px 6px;
+      margin: 10px 2px 12px;
       display: flex;
       flex-wrap: wrap;
       gap: 8px 18px;
       font-size: 0.86rem;
       color: var(--muted);
-      padding: 0 2px;
     }
     .main-nav a {
       padding-bottom: 2px;
@@ -174,7 +160,7 @@
     .breadcrumbs {
       font-size: 0.8rem;
       color: var(--muted);
-      margin: 0 2px 14px;
+      margin-bottom: 14px;
     }
     .breadcrumbs span {
       color: var(--primary-dark);
@@ -186,12 +172,37 @@
       display: grid;
       grid-template-columns: minmax(0, 1.45fr) minmax(0, 1.05fr);
       gap: 24px;
-      padding: 22px 22px 20px;
-      border-radius: 8px;
+      padding: 24px 22px;
+      border-radius: 14px;
       background: #ffffff;
-      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.12);
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
       margin-bottom: 22px;
-      border: 1px solid #dde4f0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* soft water-bubble dots */
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      opacity: 0.18;
+      pointer-events: none;
+    }
+    .hero::before {
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, #93c5fd, transparent 70%);
+      top: -30px;
+      right: 10%;
+    }
+    .hero::after {
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, #7dd3fc, transparent 70%);
+      bottom: -20px;
+      left: 5%;
     }
 
     .hero-top-pill {
@@ -207,15 +218,17 @@
     }
     .hero-top-pill span {
       display: inline-block;
-      width: 16px;
-      height: 16px;
-      border-radius: 4px;
-      background: linear-gradient(135deg, #1559b3, #4f9cff);
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background:
+        radial-gradient(circle at 30% 25%, #ffffff 0, #93c5fd 40%, #1559b3 100%);
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.4);
     }
 
     .hero h1 {
       margin: 0 0 8px;
-      font-size: 2.02rem;
+      font-size: 2.05rem;
       letter-spacing: 0.01em;
     }
     .hero h1 .highlight {
@@ -244,13 +257,11 @@
       font-size: 0.9rem;
     }
     .hero-list li::before {
-      content: "✓";
+      content: "🫧";
       position: absolute;
       left: 0;
-      top: 0;
-      font-size: 0.78rem;
-      color: #16a085;
-      font-weight: 700;
+      top: 1px;
+      font-size: 0.9rem;
     }
 
     .hero-cta-row {
@@ -263,7 +274,7 @@
 
     .btn-primary {
       border: none;
-      border-radius: 6px;
+      border-radius: 999px;
       padding: 10px 22px;
       font-size: 0.95rem;
       font-weight: 700;
@@ -271,6 +282,7 @@
       background: linear-gradient(90deg, #ffc857, #f2a93b);
       color: #1b2738;
       box-shadow: 0 8px 20px rgba(245, 184, 72, 0.5);
+      white-space: nowrap;
     }
     .btn-primary:hover { opacity: 0.97; }
 
@@ -285,12 +297,14 @@
       flex-direction: column;
       gap: 10px;
       align-items: flex-end;
+      position: relative;
+      z-index: 1;
     }
     .hero-image {
       width: 100%;
-      border-radius: 8px;
+      border-radius: 10px;
       overflow: hidden;
-      border: 2px solid #ffffff;
+      border: 3px solid #ffffff;
       box-shadow: 0 12px 28px rgba(15, 23, 42, 0.45);
     }
     .hero-image img {
@@ -301,7 +315,7 @@
 
     .hero-tag {
       padding: 7px 10px;
-      border-radius: 4px;
+      border-radius: 6px;
       background: #f1f5f9;
       font-size: 0.8rem;
       color: var(--muted);
@@ -317,7 +331,7 @@
     }
     .trust-pill {
       padding: 8px 12px;
-      border-radius: 4px;
+      border-radius: 10px;
       background: #ffffff;
       border: 1px solid #e2e8f0;
       font-size: 0.82rem;
@@ -333,11 +347,10 @@
     /* SECTIONS */
     .section {
       background: #ffffff;
-      border-radius: 6px;
-      padding: 18px 18px 16px;
+      border-radius: 12px;
+      padding: 20px 18px 18px;
       margin-bottom: 22px;
-      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
-      border: 1px solid #e3e8f3;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
     }
 
     .section-eyebrow {
@@ -359,11 +372,10 @@
     }
 
     .map-wrap {
-      border-radius: 6px;
+      border-radius: 12px;
       overflow: hidden;
       border: 1px solid #cbd5f5;
-      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.18);
-      background: #000;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.18);
     }
 
     .bullet-grid {
@@ -374,7 +386,7 @@
     }
     .mini-card {
       padding: 10px 10px 9px;
-      border-radius: 4px;
+      border-radius: 10px;
       border: 1px solid #e2e8f0;
       background: #f8fafc;
       font-size: 0.88rem;
@@ -395,7 +407,7 @@
     }
     .hydro-card {
       background: #f0fbff;
-      border-radius: 4px;
+      border-radius: 10px;
       border: 1px solid #bae6fd;
       padding: 10px 10px 9px;
     }
@@ -414,16 +426,16 @@
       margin-top: 12px;
     }
     .image-card {
-      border-radius: 4px;
+      border-radius: 10px;
       border: 1px solid #e2e8f0;
       background: #f8fafc;
       padding: 8px;
-      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
     }
     .image-card img {
       display: block;
       width: 100%;
-      border-radius: 3px;
+      border-radius: 8px;
       margin-bottom: 6px;
     }
     .image-caption {
@@ -439,12 +451,18 @@
       margin-top: 10px;
     }
     .process-step {
-      border-radius: 4px;
+      border-radius: 10px;
       border: 1px solid #e2e8f0;
       background: #f8fafc;
       padding: 10px 11px 10px;
       font-size: 0.9rem;
       position: relative;
+    }
+    .process-step h3 {
+      margin: 0 0 6px;
+      font-size: 0.98rem;
+      color: var(--primary-dark);
+      padding-right: 70px; /* prevents overlap with step badge */
     }
     .step-num {
       position: absolute;
@@ -452,15 +470,10 @@
       right: 10px;
       font-size: 0.78rem;
       font-weight: 700;
-      color: var(--primary);
-      background: #e0ecff;
-      padding: 2px 7px;
-      border-radius: 999px;
-    }
-    .process-step h3 {
-      margin: 0 0 6px;
-      font-size: 0.98rem;
       color: var(--primary-dark);
+      background: #e0ecff;
+      padding: 2px 9px;
+      border-radius: 999px;
     }
 
     /* COMPARISON STRIP */
@@ -472,7 +485,7 @@
       font-size: 0.86rem;
     }
     .compare-card {
-      border-radius: 4px;
+      border-radius: 10px;
       border: 1px solid #e2e8f0;
       background: #f9fafb;
       padding: 9px 10px;
@@ -507,7 +520,7 @@
     .cta-strip {
       margin-top: 12px;
       padding: 12px 14px;
-      border-radius: 6px;
+      border-radius: 10px;
       background: linear-gradient(90deg, #0d3976, #1559b3);
       color: #ffffff;
       display: flex;
@@ -519,7 +532,7 @@
     }
     .cta-strip strong { color: #ffe8b8; }
     .cta-strip button {
-      border-radius: 6px;
+      border-radius: 999px;
       border: none;
       background: #ffc857;
       color: #1b2738;
@@ -528,6 +541,7 @@
       font-weight: 700;
       cursor: pointer;
       box-shadow: 0 5px 13px rgba(245, 184, 72, 0.6);
+      white-space: nowrap;
     }
 
     /* FAQ + FORM SECTION */
@@ -538,7 +552,7 @@
     }
 
     details {
-      border-radius: 4px;
+      border-radius: 10px;
       border: 1px solid #e2e8f0;
       background: #f8fafc;
       padding: 9px 10px;
@@ -566,49 +580,44 @@
     details p { margin-top: 6px; }
 
     .form-card {
-      border-radius: 6px;
-      border: 1px solid #cbd5e1;
-      background: linear-gradient(135deg, #f5f8ff, #ffffff);
-      padding: 14px 12px 12px;
-      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      background: #0f172a;
+      padding: 16px 14px 14px;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.4);
       font-size: 0.9rem;
-      position: relative;
+      color: #e5e7eb;
     }
     .form-card h3 {
       margin-top: 0;
       font-size: 1rem;
+      color: #ffffff;
     }
-    .form-badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      font-size: 0.72rem;
-      margin-bottom: 6px;
-    }
-    .form-badge {
-      padding: 2px 7px;
-      border-radius: 999px;
-      border: 1px solid #d0e0ff;
-      background: #e5efff;
-      color: #1e3a8a;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      font-weight: 600;
+    .form-card p {
+      font-size: 0.83rem;
+      color: #e5e7eb;
+      margin-bottom: 10px;
     }
 
     label {
-      font-size: 0.8rem;
-      color: var(--muted);
+      font-size: 0.78rem;
+      color: #cbd5f5;
       display: block;
       margin-bottom: 3px;
     }
     input, textarea, select {
       width: 100%;
       padding: 8px 9px;
-      border-radius: 4px;
+      border-radius: 6px;
       border: 1px solid #cbd5e1;
       margin-bottom: 9px;
       font: inherit;
+      background: #020617;
+      color: #e5e7eb;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      color: #6b7280;
     }
     textarea {
       min-height: 90px;
@@ -616,37 +625,26 @@
     }
 
     .submit-btn {
-      border-radius: 6px;
+      border-radius: 999px;
       border: none;
-      background: #16a085;
-      color: #ffffff;
+      background: #22c55e;
+      color: #0b1120;
       padding: 9px 18px;
       font-size: 0.9rem;
       font-weight: 700;
       cursor: pointer;
-      box-shadow: 0 7px 16px rgba(22, 160, 133, 0.6);
+      box-shadow: 0 7px 16px rgba(34, 197, 94, 0.6);
+      white-space: nowrap;
     }
     .submit-btn:hover { opacity: 0.97; }
 
     .form-note {
       font-size: 0.78rem;
-      color: var(--muted);
+      color: #9ca3af;
       margin-top: 5px;
     }
 
-    .form-status {
-      margin-top: 6px;
-      font-size: 0.78rem;
-      min-height: 16px;
-    }
-    .form-status.ok {
-      color: #15803d;
-    }
-    .form-status.error {
-      color: var(--danger);
-    }
-
-    /* POPUP MODAL – refined version of your favorite pop-up style */
+    /* POPUP MODAL */
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -661,35 +659,24 @@
     .modal {
       max-width: 480px;
       width: 100%;
-      background: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.65);
-      padding: 0 14px 14px;
+      background: #0b1120;
+      border-radius: 16px;
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.9);
+      padding: 16px 14px 14px;
       position: relative;
-      overflow: hidden;
+      border: 1px solid #1d4ed8;
     }
-    .modal-header-strip {
-      padding: 10px 14px;
-      background: linear-gradient(120deg, #1559b3, #4f9cff);
+    .modal h2 {
+      margin: 0 0 8px;
+      font-size: 1.12rem;
       color: #ffffff;
-      margin: 0 -14px 8px;
-    }
-    .modal-header-strip h2 {
-      margin: 0;
-      font-size: 1.08rem;
-    }
-    .modal-header-strip p {
-      margin: 2px 0 0;
-      font-size: 0.8rem;
-      opacity: 0.9;
-    }
-    .modal-body {
-      padding-top: 4px;
+      text-align: center;
     }
     .modal p {
       font-size: 0.88rem;
-      color: var(--muted);
-      margin-bottom: 8px;
+      color: #e5e7eb;
+      margin-bottom: 10px;
+      text-align: center;
     }
     .modal-close {
       position: absolute;
@@ -703,6 +690,10 @@
       cursor: pointer;
       font-weight: 700;
       color: #4b5563;
+    }
+
+    .modal form {
+      margin-top: 6px;
     }
 
     /* STICKY CTA BAR */
@@ -728,7 +719,7 @@
     }
     .sticky-inner strong { color: #ffe8b8; }
     .btn-sticky {
-      border-radius: 6px;
+      border-radius: 999px;
       border: none;
       background: #ffc857;
       color: #1b2738;
@@ -737,38 +728,10 @@
       font-weight: 700;
       cursor: pointer;
       box-shadow: 0 5px 12px rgba(245, 184, 72, 0.7);
+      white-space: nowrap;
     }
 
-    /* BLOG SECTION */
-    .section-blog-intro {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 12px;
-    }
-    .blog-card {
-      border-radius: 4px;
-      border: 1px solid #e2e8f0;
-      background: #f8fafc;
-      padding: 10px 10px 9px;
-      font-size: 0.86rem;
-    }
-    .blog-card h3 {
-      margin: 0 0 4px;
-      font-size: 0.96rem;
-      color: var(--primary-dark);
-    }
-    .blog-meta {
-      font-size: 0.76rem;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-
-    /* FOOTER + HTML SITEMAP – no “microsites” wording */
+    /* FOOTER + HTML SITEMAP */
     footer {
       margin-top: 26px;
       font-size: 0.8rem;
@@ -776,7 +739,7 @@
     }
     .footer-sitemap {
       padding: 12px 12px 10px;
-      border-radius: 6px;
+      border-radius: 10px;
       border: 1px solid #e2e8f0;
       background: #f8fafc;
       display: grid;
@@ -831,10 +794,10 @@
         padding: 18px 14px;
       }
       .hero h1 {
-        font-size: 1.7rem;
+        font-size: 1.75rem;
       }
-      .brand-logo {
-        width: 100px;
+      .brand-name {
+        font-size: 1rem;
       }
     }
   </style>
@@ -850,10 +813,9 @@
         "name": "Walk In Tub NY",
         "url": "https://walkintubny.com/",
         "telephone": "+1-888-779-2284",
-        "logo": "https://www.agingsafelybaths.com/wp-content/uploads/2023/04/ella-bubbles-walk-in-tubs-image.jpg",
+        "logo": "https://www.agingsafelybaths.com/wp-content/uploads/2025/06/logo-364-112.png",
         "sameAs": [
-          "https://www.agingsafelybaths.com",
-          "https://www.showers4less.com"
+          "https://www.agingsafelybaths.com"
         ]
       },
       {
@@ -921,7 +883,7 @@
           },
           {
             "@type": "Question",
-            "name": "How do I get a free New York walk in tub or NY walk in bath quote?",
+            "name": "How do I get a free New York walk in tub quote?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Call 1-888-779-2284 or fill out the secure request form on this page. We will walk you through a few questions about your New York home and email or text transparent pricing options so you can review them at your own pace."
@@ -937,53 +899,48 @@
 <body>
 <div class="page-shell">
 
-  <div class="site-header-wrap">
-    <header>
-      <div class="brand-left">
-        <div class="brand-logo">
-          <!-- Update the src below to the exact Aging Safely Baths logo file you upload for this site -->
-          <img src="images/aging-safely-baths-logo.png" alt="Aging Safely Baths logo" />
-        </div>
-        <div class="brand-block">
-          <div class="brand-name">Walk In Tub NY</div>
-          <div class="brand-tagline">New York walk in tubs, NY walk in bath options & roll in showers for safer bathing</div>
-        </div>
+  <header>
+    <div class="brand-left">
+      <img class="header-logo" src="https://www.agingsafelybaths.com/wp-content/uploads/2025/06/logo-364-112.png" alt="Aging Safely Baths logo" loading="lazy" />
+      <div class="brand-block">
+        <div class="brand-name">Walk In Tub NY</div>
+        <div class="brand-tagline">NY walk in bath & roll in shower options for safer bathing</div>
       </div>
-      <div class="header-right">
-        <div class="header-label">Questions? Talk to a bath safety specialist</div>
-        <div class="header-phone-bar">
-          Call&nbsp;<a href="tel:1-888-779-2284"><strong>1-888-779-2284</strong></a>&nbsp;<span>(BATH)</span>
-        </div>
-        <div class="header-subline">Licensed installation where available · Ship-to-door across NY</div>
-      </div>
-    </header>
-
-    <nav class="main-nav" aria-label="Primary navigation">
-      <a href="#why-ny">Why walk in tubs</a>
-      <a href="#hydrotherapy">Hydrotherapy</a>
-      <a href="#process">How it works</a>
-      <a href="#pricing">Pricing & options</a>
-      <a href="#service-areas">Service areas</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Request info</a>
-      <a href="#blog">Articles</a>
-    </nav>
-
-    <div class="breadcrumbs" aria-label="Breadcrumb">
-      <a href="/">Home</a> › <span>Walk In Tub NY</span>
     </div>
+    <div class="header-right">
+      <div class="header-label">Questions? Talk to a bath safety specialist</div>
+      <div class="header-phone-bar">
+        Call&nbsp;<a href="tel:1-888-779-2284">1-888-779-2284</a>&nbsp;<span>(BATH)</span>
+      </div>
+      <div class="header-subline">Licensed installation where available · Ship-to-door across NY</div>
+    </div>
+  </header>
+
+  <nav class="main-nav" aria-label="Primary navigation">
+    <a href="#why-ny">Why walk in tubs</a>
+    <a href="#hydrotherapy">Hydrotherapy</a>
+    <a href="#process">How it works</a>
+    <a href="#pricing">Pricing & options</a>
+    <a href="#service-areas">Service areas</a>
+    <a href="blog.html">Blog & guides</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Request info</a>
+  </nav>
+
+  <div class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="/">Home</a> › <span>Walk In Tub NY</span>
   </div>
 
-  <main id="top">
+  <main>
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="top">
       <div>
         <div class="hero-top-pill">
           <span></span> Safer bathing for New York seniors & caregivers
         </div>
 
-        <h1>Safer <span class="highlight">walk in tub NY</span> and NY walk in bath solutions for comfort, confidence & peace of mind</h1>
+        <h1>Safer <span class="highlight">walk in tub NY</span> and NY walk in bath solutions for comfort & peace of mind</h1>
 
         <p class="hero-sub">
           Every year, thousands of New Yorkers visit the ER after a bathroom fall. A properly sized walk in tub, NY walk in bath
@@ -1021,7 +978,7 @@
 
     <!-- TRUST STRIP -->
     <section class="trust-strip" aria-label="Reasons to trust Walk In Tub NY">
-      <div class="trust-pill"><span>🛁</span>Walk in tubs, NY walk in bath options, roll in showers & tub and shower combos for New York bathrooms.</div>
+      <div class="trust-pill"><span>🛁</span>Walk in tubs, NY walk in bath options & roll in showers for real New York bathrooms.</div>
       <div class="trust-pill"><span>🛠</span>Licensed, insured installation partners in many New York regions.</div>
       <div class="trust-pill"><span>📦</span>Ship-to-door delivery with guidance for your own plumber or contractor.</div>
       <div class="trust-pill"><span>❤️</span>Compassionate guidance for seniors, caregivers & medical professionals.</div>
@@ -1045,9 +1002,9 @@
             serious risk for New Yorkers.
           </p>
           <p>
-            A modern walk in tub or roll in shower changes that story. Instead of swinging a leg over a high edge, you
-            open a door, sit on a secure, chair-height seat and let warm water do the work. Grab bars, non-slip floors
-            and easy-reach controls keep you supported from the moment you step in until you dry off.
+            A modern walk in tub, NY walk in bath or roll in shower changes that story. Instead of swinging a leg over
+            a high edge, you open a door, sit on a secure, chair-height seat and let warm water do the work. Grab bars,
+            non-slip floors and easy-reach controls keep you supported from the moment you step in until you dry off.
           </p>
           <p>
             For many families, the biggest benefit is peace of mind. Adult children can worry less when a parent lives
@@ -1115,8 +1072,8 @@
 
       <p>
         Between harsh winters, long commutes, caregiving duties and the general pace of New York life, most bodies
-        rarely get a real break. A hydrotherapy walk in tub or NY walk in bath gives you a quiet, private space to reset
-        joints, muscles and mindset without leaving home.
+        rarely get a real break. A hydrotherapy walk in tub or NY walk in bath gives you a quiet, private space to
+        reset joints, muscles and mindset without leaving home.
       </p>
 
       <div class="hydro-grid">
@@ -1187,8 +1144,8 @@
             hallways and stairs.
           </p>
           <p>
-            From there we narrow down a few best-fit walk in tubs, NY walk in bath options and roll in showers that match your layout, budget and
-            goals.
+            From there we narrow down a few best-fit walk in tubs, NY walk in bath options and roll in showers that match
+            your layout, budget and goals.
           </p>
         </div>
 
@@ -1253,11 +1210,7 @@
         </div>
         <div class="mini-card">
           <h3>Roll in & low threshold showers</h3>
-          <p>
-            Barrier-free and low-step showers with seats, grab bars and handheld wands for flexible use.
-            Prefer a roll in shower instead of a NY walk in bath? You can also explore barrier-free shower systems at
-            <a href="https://www.showers4less.com" target="_blank" rel="noopener">Showers4Less.com</a>.
-          </p>
+          <p>Barrier-free and low-step showers with seats, grab bars and handheld wands for flexible use.</p>
         </div>
       </div>
 
@@ -1311,10 +1264,9 @@
 
       <p style="font-size:0.86rem;color:var(--muted);">
         You can also explore the Aging Safely Baths New York locations page for additional details:
-        <a href="https://www.agingsafelybaths.com/locations/new-york-walk-in-tubs-roll-in-showers/" target="_blank" rel="noopener">
+        <a href="https://www.agingsafelybaths.com/about/locations/new-york/" target="_blank" rel="noopener">
           New York walk in tubs & roll in showers
-        </a>, or browse all states on the
-        <a href="https://www.agingsafelybaths.com/about/locations/" target="_blank" rel="noopener">Aging Safely Baths locations directory</a>.
+        </a>.
       </p>
 
       <div class="cta-strip">
@@ -1400,7 +1352,7 @@
           </details>
 
           <details>
-            <summary>How do I get a free New York walk in tub or NY walk in bath quote?</summary>
+            <summary>How do I get a free New York walk in tub quote?</summary>
             <p>
               Call <strong>1-888-779-2284</strong> to speak with a New York bath safety specialist, or use the secure
               quote form on this page. We will collect a few details about your bathroom and your goals and then prepare
@@ -1411,20 +1363,15 @@
 
         <aside id="contact" aria-label="Request information form">
           <div class="form-card">
-            <div class="form-badge-row">
-              <div class="form-badge">Secure request</div>
-              <div class="form-badge">No pushy in-home sales</div>
-            </div>
             <h3>Request your New York walk in tub or shower info</h3>
             <p>
               Share a few details and a bath safety specialist will follow up with options tailored to your New York
               home. No pushy in-home sales visits — just honest, helpful guidance.
             </p>
 
-            <!-- MAIN FORM – uses EmailJS -->
-            <form class="js-emailjs-form" data-form-source="WalkInTubNY main form">
+            <!-- Updated names so mailto body includes data -->
+            <form action="mailto:sales@agingsafelybaths.com" method="post" enctype="text/plain">
               <input type="hidden" name="subject" value="WalkInTubNY.com lead" />
-              <input type="hidden" name="source_page" value="WalkInTubNY.com – main form" />
 
               <label for="name-main">Name*</label>
               <input id="name-main" name="name" required />
@@ -1440,10 +1387,10 @@
 
               <label for="interest-main">Primary interest</label>
               <select id="interest-main" name="interest">
-                <option value="Walk in tub">Walk in tub</option>
-                <option value="Roll in shower">Roll in shower</option>
-                <option value="Walk in tub + shower combo">Walk in tub + shower combo</option>
-                <option value="Not sure yet">Not sure yet</option>
+                <option>Walk in tub</option>
+                <option>Roll in shower</option>
+                <option>Walk in tub + shower combo</option>
+                <option>Not sure yet</option>
               </select>
 
               <label for="details-main">Tell us about your bathroom & goals</label>
@@ -1455,56 +1402,15 @@
                 Prefer to talk? Call <strong><a href="tel:1-888-779-2284">1-888-779-2284</a></strong> and mention
                 WalkInTubNY.com so we can quickly pull up this page while we talk.
               </div>
-
-              <div class="form-status" aria-live="polite"></div>
             </form>
           </div>
         </aside>
       </div>
     </section>
 
-    <!-- BLOG / ARTICLES INFRASTRUCTURE -->
-    <section class="section" id="blog">
-      <div class="section-eyebrow">Articles & planning</div>
-      <h2>New York bath safety & walk in tub planning tips</h2>
-      <p class="section-blog-intro">
-        As you build out the blog for WalkInTubNY.com, this section can showcase articles that answer real questions
-        New York families ask every day. You can point posts to deeper resources on AgingSafelyBaths.com and
-        Showers4Less.com while keeping this site focused on local intent.
-      </p>
-      <div class="blog-grid">
-        <article class="blog-card">
-          <h3>How to choose the right walk in tub for a New York apartment</h3>
-          <div class="blog-meta">Planning topic idea · Great for NYC & co-op readers</div>
-          <p>
-            A future post here could cover delivery routes, elevator sizing, board approvals and compact walk in tub
-            footprints that work in smaller spaces.
-          </p>
-        </article>
-        <article class="blog-card">
-          <h3>NY walk in bath vs roll in shower: which is better for your routine?</h3>
-          <div class="blog-meta">Comparison topic idea · Targets both tub & shower keywords</div>
-          <p>
-            This post could compare pros and cons for people who prefer soaking, caregivers who help with bathing and
-            wheelchair users who need open, barrier-free layouts.
-          </p>
-        </article>
-        <article class="blog-card">
-          <h3>What to expect from a New York walk in tub installation</h3>
-          <div class="blog-meta">Process topic idea · Helps reduce fear & unknowns</div>
-          <p>
-            A clear walkthrough of timelines, what happens on installation day, how crews protect your home and how
-            inspections and warranties work.
-          </p>
-        </article>
-      </div>
-      <!-- When you are ready, you can replace these example cards with real blog links like:
-           <a href="/blog/new-york-walk-in-tub-pricing.html">... -->
-    </section>
-
   </main>
 
-  <!-- HTML SITEMAP FOOTER (no “microsites” wording) -->
+  <!-- HTML SITEMAP FOOTER -->
   <footer>
     <div class="footer-sitemap">
       <div>
@@ -1517,8 +1423,7 @@
         <a href="#service-areas">New York service areas</a>
         <a href="#faq">Walk in tub FAQ</a>
         <a href="#contact">Request information</a>
-        <a href="#blog">Articles & planning tips</a>
-        <a href="/sitemap.xml">XML sitemap</a>
+        <a href="blog.html">Blog & safety guides</a>
       </div>
       <div>
         <div class="footer-heading">Aging Safely Baths</div>
@@ -1526,15 +1431,14 @@
         <a href="https://www.agingsafelybaths.com/walk-in-tubs/" target="_blank" rel="noopener">Walk in tubs</a>
         <a href="https://www.agingsafelybaths.com/handicap-showers/" target="_blank" rel="noopener">Roll in & handicap showers</a>
         <a href="https://www.agingsafelybaths.com/about/locations/" target="_blank" rel="noopener">Location directory</a>
-        <a href="https://www.agingsafelybaths.com/locations/new-york-walk-in-tubs-roll-in-showers/" target="_blank" rel="noopener">New York locations page</a>
+        <a href="https://www.agingsafelybaths.com/about/locations/new-york/" target="_blank" rel="noopener">New York locations page</a>
       </div>
       <div>
-        <div class="footer-heading">Showers4Less & resources</div>
-        <a href="https://www.showers4less.com" target="_blank" rel="noopener">Showers4Less.com – roll in showers</a>
-        <a href="https://www.agingsafelybaths.com/faqs/" target="_blank" rel="noopener">Aging Safely Baths FAQ</a>
+        <div class="footer-heading">Popular resource links</div>
         <a href="https://www.cdc.gov/homeandrecafety/falls/" target="_blank" rel="noopener">CDC: older adult fall facts</a>
         <a href="https://aging.ny.gov/" target="_blank" rel="noopener">New York State Office for the Aging</a>
         <a href="https://www.nia.nih.gov/health/falls-and-fall-prevention-older-adults" target="_blank" rel="noopener">NIA fall prevention tips</a>
+        <a href="https://www.agingsafelybaths.com/faqs/" target="_blank" rel="noopener">Aging Safely Baths FAQ</a>
       </div>
     </div>
 
@@ -1548,50 +1452,42 @@
 <div class="modal-overlay" id="quote-modal">
   <div class="modal">
     <button class="modal-close" type="button" aria-label="Close quote form">×</button>
-    <div class="modal-header-strip">
-      <h2>Get your free New York walk in tub quote</h2>
-      <p>Fast, simple and focused on what works best for your home and budget.</p>
-    </div>
-    <div class="modal-body">
-      <p>Complete this quick form and a bath safety specialist will follow up with options tailored to your New York home.</p>
+    <h2>Get your free New York walk in tub quote</h2>
+    <p>Complete this quick form and a bath safety specialist will follow up with NY walk in bath and shower options tailored to your home.</p>
 
-      <!-- POPUP FORM – uses EmailJS -->
-      <form class="js-emailjs-form" data-form-source="WalkInTubNY popup form">
-        <input type="hidden" name="subject" value="WalkInTubNY.com popup lead" />
-        <input type="hidden" name="source_page" value="WalkInTubNY.com – popup form" />
+    <!-- Updated names here too -->
+    <form action="mailto:sales@agingsafelybaths.com" method="post" enctype="text/plain">
+      <input type="hidden" name="subject" value="WalkInTubNY.com popup lead" />
 
-        <label for="name-popup">Name*</label>
-        <input id="name-popup" name="name" required />
+      <label for="name-popup">Name*</label>
+      <input id="name-popup" name="name" required />
 
-        <label for="phone-popup">Phone*</label>
-        <input id="phone-popup" name="phone" required />
+      <label for="phone-popup">Phone*</label>
+      <input id="phone-popup" name="phone" required />
 
-        <label for="email-popup">Email*</label>
-        <input id="email-popup" type="email" name="email" required />
+      <label for="email-popup">Email*</label>
+      <input id="email-popup" type="email" name="email" required />
 
-        <label for="zip-popup">ZIP Code</label>
-        <input id="zip-popup" name="zip" />
+      <label for="zip-popup">ZIP Code</label>
+      <input id="zip-popup" name="zip" />
 
-        <label for="interest-popup">Primary interest</label>
-        <select id="interest-popup" name="interest">
-          <option value="Walk in tub">Walk in tub</option>
-          <option value="Roll in shower">Roll in shower</option>
-          <option value="Walk in tub + shower combo">Walk in tub + shower combo</option>
-          <option value="Not sure yet">Not sure yet</option>
-        </select>
+      <label for="interest-popup">Primary interest</label>
+      <select id="interest-popup" name="interest">
+        <option>Walk in tub</option>
+        <option>Roll in shower</option>
+        <option>Walk in tub + shower combo</option>
+        <option>Not sure yet</option>
+      </select>
 
-        <label for="details-popup">Tell us about your bathroom & goals</label>
-        <textarea id="details-popup" name="details" placeholder="Example: Safer tub for my dad in Queens, narrow 60 inch alcove now."></textarea>
+      <label for="details-popup">Tell us about your bathroom & goals</label>
+      <textarea id="details-popup" name="details" placeholder="Example: Safer tub for my dad in Queens, narrow 60 inch alcove now."></textarea>
 
-        <button type="submit" class="submit-btn">Send my free New York quote →</button>
+      <button type="submit" class="submit-btn">Send my free New York quote →</button>
 
-        <div class="form-note">
-          Prefer to talk? Call <strong><a href="tel:1-888-779-2284">1-888-779-2284</a></strong> and mention this WalkInTubNY.com popup.
-        </div>
-
-        <div class="form-status" aria-live="polite"></div>
-      </form>
-    </div>
+      <div class="form-note">
+        Prefer to talk? Call <strong><a href="tel:1-888-779-2284">1-888-779-2284</a></strong> and mention this WalkInTubNY.com popup.
+      </div>
+    </form>
   </div>
 </div>
 
@@ -1606,11 +1502,7 @@
   </div>
 </div>
 
-<!-- EmailJS SDK -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
 <script>
-  // Modal + sticky CTA
   (function() {
     const modal = document.getElementById('quote-modal');
     const openButtons = document.querySelectorAll('.js-open-modal');
@@ -1628,49 +1520,6 @@
 
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeModal();
-    });
-  })();
-</script>
-
-<script>
-  // EmailJS form handling for both forms
-  (function() {
-    // Initialize EmailJS with your public key
-    emailjs.init({
-      publicKey: 'alWutsHLG6c3h9P2j'
-    });
-
-    function handleEmailFormSubmit(event) {
-      event.preventDefault();
-      const form = event.target;
-      const statusEl = form.querySelector('.form-status');
-      if (statusEl) {
-        statusEl.textContent = 'Sending…';
-        statusEl.className = 'form-status';
-      }
-
-      emailjs.sendForm('service_usimtub', 'template_5n0cskt', form)
-        .then(function() {
-          if (statusEl) {
-            statusEl.textContent = 'Thank you. Your request has been sent and a bath safety specialist will follow up shortly.';
-            statusEl.classList.add('ok');
-          }
-          form.reset();
-        })
-        .catch(function(error) {
-          if (statusEl) {
-            statusEl.textContent = 'Sorry, something went wrong. You can also call 1-888-779-2284 (BATH) to share your details by phone.';
-            statusEl.classList.add('error');
-          }
-          console.error('EmailJS error:', error);
-        });
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-      const forms = document.querySelectorAll('.js-emailjs-form');
-      forms.forEach(function(form) {
-        form.addEventListener('submit', handleEmailFormSubmit);
-      });
     });
   })();
 </script>
