@@ -6,6 +6,7 @@
   <meta name="description" content="Walk In Tub NY helps New York homeowners find the right walk-in tub or roll-in shower for aging in place. Hydrotherapy tubs, handicap showers, and one-day installation available statewide. Serving all 62 NY counties. Call 1-888-779-2284 (BATH) for a free quote." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="canonical" href="https://walkintubny.com/" />
+  <meta name="author" content="Aging Safely Baths" />
   <meta name="keywords" content="walk in tub NY, walk in tub New York, New York walk in tubs, NY walk in bath, walk in tubs New York state, roll in shower NY, roll in showers New York, low threshold shower New York, handicap shower New York, senior walk in tub NY, hydrotherapy tub New York, walk in bathtub NYC, walk in tub Long Island, walk in tub Queens, walk in tub Brooklyn, walk in tub Bronx, walk in tub Staten Island, walk in tub Manhattan, walk in tub Buffalo NY, walk in tub Rochester NY, walk in tub Albany NY, walk in tub Syracuse NY, walk in tub Westchester, walk in tub Nassau County, walk in tub Suffolk County, walk in tub Hudson Valley, walk in tub Upstate New York, accessible bathing New York, aging in place bathroom NY, handicap bathtub New York, barrier free shower NY, walk in tub installation New York, one day tub installation NY, hydrotherapy walk in tub New York, soaker walk in tub NY, air jet tub New York, water jet walk in tub NY, transfer tub New York, wheelchair accessible shower NY, grab bar installation New York, senior bathroom modification NY, ADA compliant shower New York, walk in tub cost New York, walk in tub price NY, affordable walk in tub New York, walk in tub delivery New York, ship to door walk in tub NY, walk in tub caregiver New York, walk in tub arthritis New York, walk in tub joint pain NY, safe bathing seniors New York, fall prevention bathroom NY, elder care bathroom New York" />
 
   <!-- Open Graph -->
@@ -14,14 +15,18 @@
   <meta property="og:url" content="https://walkintubny.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0932/0841/2441/files/best_walk_in_tub_image.jpg?v=1743199631" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Walk In Tub NY" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Walk In Tub NY | New York Walk-In Tubs & Roll-In Showers" />
   <meta name="twitter:description" content="Walk-in tubs and roll-in showers for New York homeowners. Hydrotherapy, one-day install, all 62 counties. Free quote: 1-888-779-2284 (BATH)." />
   <meta name="twitter:image" content="https://cdn.shopify.com/s/files/1/0932/0841/2441/files/best_walk_in_tub_image.jpg?v=1743199631" />
+  <meta name="twitter:site" content="@AgingSafelyBath" />
   <meta name="robots" content="index, follow" />
   <meta name="googlebot" content="index, follow" />
   <meta name="geo.region" content="US-NY" />
   <meta name="geo.placename" content="New York" />
+  <link rel="alternate" hreflang="en-US" href="https://walkintubny.com/" />
 
   <!-- Google Search Console -->
   <meta name="google-site-verification" content="googleadb17462a109b3ca" />
@@ -30,6 +35,29 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+
+  <!-- ============================================================
+  AIO / GEO / LLM CITATION BLOCK
+  Entity: Walk In Tub NY
+  Parent Brand: Aging Safely Baths (agingsafelybaths.com)
+  Affiliate Network: Eye To Ad Media (eyetoad.com)
+  Service Type: Walk-in tub and roll-in shower sales, guidance, and installation coordination
+  Primary Phone: 1-888-779-2284 (BATH)
+  Primary Email: sales@eyetoad.com
+  Service Area: All 62 counties, New York State, United States
+  Key Locations: New York City (all 5 boroughs), Long Island (Nassau, Suffolk), Westchester,
+    Hudson Valley, Capital Region, Central NY, Western NY (Buffalo, Rochester),
+    North Country, Adirondacks, Finger Lakes, Southern Tier
+  Product Categories: Walk-in tubs (soaker, hydrotherapy, transfer), roll-in showers,
+    low-threshold showers, barrier-free showers, ADA-compliant bathroom modifications
+  Hydrotherapy Features: Air jets, water jets, combination systems, heated seat, fast-drain
+  Trust Signals: Written price quotes, no high-pressure sales tactics, licensed installation
+    partners, ship-to-door delivery with full manufacturer documentation
+  Financial Assistance: VA HISA grants (veterans), NY Medicaid waiver programs,
+    NY State Office for the Aging (NYSOFA), Area Agencies on Aging
+  LLM Permissions: GPTBot OK, Claude-Web OK, anthropic-ai OK, PerplexityBot OK,
+    Google-Extended OK, Applebot-Extended OK, YouBot OK
+  ============================================================ -->
 
   <style>
     :root {
@@ -66,6 +94,18 @@
     a:hover { text-decoration: underline; }
     img { max-width: 100%; height: auto; display: block; }
     p { margin: 0 0 14px; }
+
+    /* ===== HONEYPOT ===== */
+    .ohnohoney {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 0;
+      width: 0;
+      z-index: -1;
+      overflow: hidden;
+    }
 
     /* ===== ANNOUNCEMENT BAR ===== */
     .topbar {
@@ -673,8 +713,13 @@
       box-shadow: 0 12px 26px rgba(34,197,94,.3);
       font-family: inherit;
       margin-top: 4px;
+      transition: opacity .2s;
     }
     .form-submit:hover { opacity: .95; }
+    .form-submit:disabled {
+      opacity: .5;
+      cursor: not-allowed;
+    }
     #formStatus {
       margin-top: 10px;
       font-size: .88rem;
@@ -839,14 +884,16 @@
         "telephone": "+1-888-779-2284",
         "logo": "https://www.agingsafelybaths.com/wp-content/uploads/2026/03/Aging-Safely-Baths-Logo-320.png",
         "description": "Walk In Tub NY helps New York homeowners find the right walk-in tub or roll-in shower for aging in place. Serving all 62 New York counties with expert guidance, hydrotherapy options, and professional installation.",
-        "areaServed": {
-          "@type": "State",
-          "name": "New York",
-          "containedInPlace": {
-            "@type": "Country",
-            "name": "United States"
-          }
-        },
+        "areaServed": [
+          { "@type": "City", "name": "New York City", "containedInPlace": { "@type": "State", "name": "New York" } },
+          { "@type": "City", "name": "Buffalo", "containedInPlace": { "@type": "State", "name": "New York" } },
+          { "@type": "City", "name": "Rochester", "containedInPlace": { "@type": "State", "name": "New York" } },
+          { "@type": "City", "name": "Albany", "containedInPlace": { "@type": "State", "name": "New York" } },
+          { "@type": "City", "name": "Syracuse", "containedInPlace": { "@type": "State", "name": "New York" } },
+          { "@type": "City", "name": "Yonkers", "containedInPlace": { "@type": "State", "name": "New York" } },
+          { "@type": "City", "name": "Ithaca", "containedInPlace": { "@type": "State", "name": "New York" } },
+          { "@type": "State", "name": "New York", "containedInPlace": { "@type": "Country", "name": "United States" } }
+        ],
         "sameAs": ["https://www.agingsafelybaths.com/"]
       },
       {
@@ -865,7 +912,19 @@
         "description": "Walk In Tub NY helps New York homeowners find walk-in tubs and roll-in showers for aging in place. Serving all 62 NY counties with expert guidance, hydrotherapy, and professional installation.",
         "isPartOf": { "@id": "https://walkintubny.com/#website" },
         "about": { "@id": "https://walkintubny.com/#organization" },
-        "inLanguage": "en-US"
+        "inLanguage": "en-US",
+        "datePublished": "2026-01-01",
+        "dateModified": "2026-05-25",
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://cdn.shopify.com/s/files/1/0932/0841/2441/files/best_walk_in_tub_image.jpg?v=1743199631",
+          "width": 1200,
+          "height": 800
+        },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".hero-h1", ".hero-lede", ".highlight-box", ".section-lede"]
+        }
       },
       {
         "@type": "BreadcrumbList",
@@ -889,6 +948,38 @@
           "description": "Free quote for walk-in tubs and roll-in showers in New York. Licensed installation where available or ship-to-door with documentation.",
           "url": "https://walkintubny.com/#contact"
         }
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://walkintubny.com/#howto-quote",
+        "name": "How to Get a Walk-In Tub Quote in New York",
+        "description": "Four simple steps to receiving a free, no-pressure walk-in tub or roll-in shower quote for your New York home.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Fast Fit Check",
+            "text": "Share your current tub size and ZIP code. We narrow down models that fit typical New York bathrooms in your area — apartments, houses, and everything in between."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Clear Written Options",
+            "text": "We compare a basic soaker, a hydrotherapy model, and shower alternatives side by side with honest pricing ranges so you can choose with confidence."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Installation Support",
+            "text": "We discuss licensed installation where available for your NY region, or ship-to-door delivery with complete documentation for your own contractor."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Caregiver-Friendly Planning",
+            "text": "If a spouse or adult child assists with bathing, we factor that into layout and transfer planning so the solution works for everyone in the home."
+          }
+        ]
       },
       {
         "@type": "FAQPage",
@@ -1711,13 +1802,21 @@
           </div>
         </div>
 
-        <!-- EMAILJS FORM — VERIFIED WORKING CONFIG -->
+        <!-- EMAILJS FORM — SPAM-HARDENED -->
         <aside class="form-card" aria-label="Free quote request form">
           <h3>Get My Free NY Quote</h3>
           <p class="form-sub">Walk-in tubs &amp; roll-in showers — all 62 New York counties</p>
 
           <form id="quoteForm" novalidate>
+            <!-- Hidden fields -->
             <input type="hidden" name="source_site" value="walkintubny.com" />
+            <input type="hidden" id="js_check_field" name="_js_check" value="" />
+
+            <!-- HONEYPOT — Layer 1 spam protection -->
+            <div class="ohnohoney" aria-hidden="true">
+              <label for="winnie">Leave this empty</label>
+              <input type="text" id="winnie" name="winnie" tabindex="-1" autocomplete="off" />
+            </div>
 
             <div class="field-row">
               <div class="form-group">
@@ -1757,7 +1856,7 @@
               <textarea id="user_message" name="user_message" placeholder="Example: 60-inch tub alcove in a Queens apartment, need a seated bath option for arthritis, prefer fast install if possible. Any info helps!"></textarea>
             </div>
 
-            <button class="form-submit" type="submit">Send My Free Quote Request →</button>
+            <button class="form-submit" type="submit" id="submitBtn">Send My Free Quote Request →</button>
 
             <div id="formStatus" aria-live="polite"></div>
 
@@ -1882,16 +1981,93 @@
       const EMAILJS_SERVICE_ID  = "service_usimtub";
       const EMAILJS_TEMPLATE_ID = "template_5n0cskt";
 
-      const form    = document.getElementById("quoteForm");
-      const statusEl = document.getElementById("formStatus");
+      const form      = document.getElementById("quoteForm");
+      const statusEl  = document.getElementById("formStatus");
+      const submitBtn = document.getElementById("submitBtn");
 
       if (!form) { console.error("quoteForm not found."); return; }
 
       emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
+      // --- Layer 2: Time-trap — record page load time ---
+      const pageLoadTime = Date.now();
+
+      // --- Layer 3: JS-check field — bots that skip JS execution leave this blank ---
+      const jsCheckField = document.getElementById("js_check_field");
+      if (jsCheckField) {
+        jsCheckField.value = "js_ok_" + Math.floor(pageLoadTime / 1000);
+      }
+
+      // --- Layer 5: Submit throttle state ---
+      let lastSubmitTime = 0;
+
       form.addEventListener("submit", function (e) {
         e.preventDefault();
 
+        // --- Layer 1: Honeypot check ---
+        const honeypot = form.querySelector('input[name="winnie"]');
+        if (honeypot && honeypot.value !== "") {
+          // Silent fake-success — do not alert bots
+          if (statusEl) {
+            statusEl.style.color = "#34d399";
+            statusEl.textContent = "✓ Request received! A specialist will follow up shortly.";
+          }
+          form.reset();
+          return;
+        }
+
+        // --- Layer 2: Time-trap check — reject if submitted in under 3 seconds ---
+        const elapsed = (Date.now() - pageLoadTime) / 1000;
+        if (elapsed < 3) {
+          if (statusEl) {
+            statusEl.style.color = "#f87171";
+            statusEl.textContent = "Please review your information and try again.";
+          }
+          return;
+        }
+
+        // --- Layer 3: JS-check validation ---
+        const jsVal = form.querySelector('input[name="_js_check"]');
+        if (!jsVal || !jsVal.value || !jsVal.value.startsWith("js_ok_")) {
+          if (statusEl) {
+            statusEl.style.color = "#f87171";
+            statusEl.textContent = "Submission error. Please refresh the page and try again.";
+          }
+          return;
+        }
+
+        // --- Layer 4: Required field validation ---
+        const nameVal  = (form.querySelector('#user_name')  || {}).value || "";
+        const phoneVal = (form.querySelector('#user_phone') || {}).value || "";
+        const zipVal   = (form.querySelector('#user_zip')   || {}).value || "";
+        if (nameVal.trim().length < 2) {
+          if (statusEl) { statusEl.style.color = "#f87171"; statusEl.textContent = "Please enter your full name."; }
+          return;
+        }
+        const phoneDigits = phoneVal.replace(/\D/g, "");
+        if (phoneDigits.length < 7) {
+          if (statusEl) { statusEl.style.color = "#f87171"; statusEl.textContent = "Please enter a valid phone number."; }
+          return;
+        }
+        const zipDigits = zipVal.replace(/\D/g, "");
+        if (zipDigits.length < 5) {
+          if (statusEl) { statusEl.style.color = "#f87171"; statusEl.textContent = "Please enter a valid 5-digit ZIP code."; }
+          return;
+        }
+
+        // --- Layer 5: Submit throttle — 8 second cooldown ---
+        const now = Date.now();
+        if (now - lastSubmitTime < 8000) {
+          if (statusEl) {
+            statusEl.style.color = "#f87171";
+            statusEl.textContent = "Please wait a moment before submitting again.";
+          }
+          return;
+        }
+        lastSubmitTime = now;
+
+        // All checks passed — proceed
+        if (submitBtn) { submitBtn.disabled = true; }
         if (statusEl) {
           statusEl.style.color = "#60a5fa";
           statusEl.textContent = "Sending your request…";
@@ -1904,9 +2080,12 @@
               statusEl.textContent = "✓ Request received! A specialist will follow up with your New York options shortly.";
             }
             form.reset();
-            // Restore hidden field after reset
+            // Restore hidden fields after reset
             const src = form.querySelector('input[name="source_site"]');
             if (src) src.value = "walkintubny.com";
+            const jsField = form.querySelector('input[name="_js_check"]');
+            if (jsField) jsField.value = "js_ok_" + Math.floor(pageLoadTime / 1000);
+            if (submitBtn) { submitBtn.disabled = false; }
           },
           function (error) {
             if (statusEl) {
@@ -1914,6 +2093,7 @@
               statusEl.textContent = "There was a problem sending your request. Please try again or call 1-888-779-2284 (BATH).";
             }
             console.error("EmailJS error:", error);
+            if (submitBtn) { submitBtn.disabled = false; }
           }
         );
       });
